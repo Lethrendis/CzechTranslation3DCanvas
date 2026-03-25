@@ -1,0 +1,2486 @@
+{
+    "levels3dpreview": {
+        "controls": {
+            "preview3d": "Přepínač 3D režimu",
+            "miniCanvas": "Oddělit/Obnovit plátno",
+            "tile3dPolygon": "Nakreslit tvar pro extruzi",
+            "tips": {
+                "templatePlacement": "Umístění 3D šablony: kolečko myši pro otočení. Ctrl + kolečko pro změnu výšky. Alt + kolečko pro naklonění."
+            },
+            "loading": {
+                "load": "Načítání 3D plátna...",
+                "env": "Vytváření 3D prostředí...",
+                "gravity": "Výpočet gravitace...",
+                "shaders": "Kompilace shaderů..."
+            },
+            "loadingScreen": {
+                "navtools": "Nástroje navigace scény (vlevo od ",
+                "showcontrols": "Zobrazit ovládání (přepínač)",
+                "togglecamera": "Přepnout herní kameru",
+                "cameracontrols": "Ovládání kamery",
+                "tokencontrols": "Ovládání tokenu",
+                "pan": "Posun",
+                "rotate": "Otáčení",
+                "zoom": "Přiblížení",
+                "topdown": "Pohled shora",
+                "firstperson": "Pohled z první osoby",
+                "unlock": "Odemknout",
+                "lockon": "Zamknout na cíl",
+                "move": "Pohyb",
+                "elevation": "Let",
+                "snapping": "Přichytit k zemi",
+                "rebind": "Klávesy můžeš přenastavit v nastavení.",
+                "holddrag": "Podržet + táhnout",
+                "toggle": "Přepnout",
+                "manualpan": "Ruční posun",
+                "dragdrop": "Táhni a pusť",
+                "tap": "Kliknout",
+                "scroll": "Rolovat",
+                "loadingdone": "3D plátno připraveno! Stiskni <i class='fas fa-question control-highlighted'></i> pro zavření této obrazovky.",
+                "loadingarrow": "Klikni na ikonu '?' tam, kam ukazuje šipka, pro zavření načítací obrazovky."
+            }
+        },
+        "errors": {
+            "initfailed": "3D Canvas: Inicializace selhala. Může jít o problém s cache, zkus CTRL+F5 pro znovunačtení stránky. Také se ujisti, že máš aktivní scénu. Případně může být 3D Canvas či některá z jeho závislostí zastaralá či poškozená. Ujisti se, že jsou moduly aktuální, a pokud nic nepomůže, zkus přeinstalaci.",
+            "noActiveScene": "3D Canvas: Nebyla nalezena žádná aktivní scéna. Scéna byla automaticky aktivována, prosím obnov stránku.",
+            "noScenes": "3D Canvas: Nebyly nalezeny žádné scény. Byla vytvořena výchozí scéna, prosím obnov stránku.",
+            "attachmentNotFound": "3D Canvas: Příloha nebyla nalezena. Token: %token% | Příloha: %attachment%",
+            "gamecameradisabled": "3D Canvas: Vypínám herní kameru. Ta je zapnutá, ale volba 'Používat pro kalkulaci výhledu 3D geometrii' je odškrtnutá.",
+            "filenotsupported": "Formát souboru není podporován nebo chybí",
+            "nomapgencells": "Na vygenerované mapě nebyly nalezeny žádné buňky či žádný platný materiál pro dynamickou síť generátoru map",
+            "toofarfromdoor": "Tvůj token je příliš daleko, aby otevřel dveře",
+            "tokenNotGrounded": "Pokus o pohyb není povolen, token není na zemi.",
+            "3dnotactive": "Nelze otevřít vytažené plátno, 3D režim není aktivní.",
+            "canping": "Uživatel nemá oprávnění pingovat na mapě.",
+            "canpingpan": "Uživatel nemá oprávnění odesílat pozici kamery.",
+            "overmaxelevation": "Pokus o pohyb překračuje maximální výšku této scény.",
+            "particleSystem": {
+                "type": "Particle system: typ '%type%' není podporován, platné typy jsou: ",
+                "fromto": "Particle system: Cíl a/nebo zdroj nebyly zadány nebo nejsou definované.",
+                "onend": "Particle system: .onEnd(): jeden nebo více argumentů nebylo instancí Particle3D."
+            },
+            "critical": "3D Canvas: Vykreslovací smyčka narazila na fatální chybu. Pokouším se obnovit...",
+            "notarget": "3D Canvas: Nenalezen žádný cíl pro přetažení. Ujisti se, že máš alespoň jeden 3D objekt či zapnuté pozadí."
+        },
+        "notifications": {
+            "initialviewcleared": "Výchozí pozice pohledu vyčištěna",
+            "initialviewcaptured": "Výchozí pozice pohledu uložena"
+        },
+        "clipNavigator": {
+            "disabled": "Zobrazit vše",
+            "sync": "Synchronizovat s hráči",
+            "gamecamera": "Přepnout herní kameru",
+            "syncNotification": "Pohled úrovně pro {{level}} synchronizován se všemi hráči",
+            "cameraToToken": "Zaměřit kameru na vybraný token",
+            "automode": "Režim sledování",
+            "controls": "Zobrazit ovládání",
+            "lockon": "Přepnout zamknutí na cíl",
+            "performance": "Nastavit režim výkonu",
+            "performancereport": "Report výkonu",
+            "wireframe": "Přepínač kolizí",
+            "fog": "Přepínač mlhy vzdálenosti"
+        },
+        "mapgen": {
+            "title": "Generátor map: výška buňky 1 se rovná ",
+            "tooltips": {
+                "fit-to-scene": "Automaticky změnit velikost a umístit dlaždici",
+                "select-all": "Vybrat vše",
+                "deselect-all": "Zrušit výběr",
+                "set-elevation": "Nastavit výšku vybraným buňkám",
+                "add-material": "Přidat materiál",
+                "apply-material": "Použít materiál na vybrané buňky",
+                "select-material": "Vybrat buňky s tímto materiálem",
+                "select-elevation": "Vybrat buňky s touto výškou",
+                "delete-material": "Odstranit materiál",
+                "invert": "Invertovat výběr",
+                "toggle-material": "Rozbalit/Sbalit materiál",
+                "clear-material": "Vyčistit materiál"
+            },
+            "generator": {
+                "title": "Generovat mapu",
+                "content": "Opravdu chceš vygenerovat novou mapu? Tím přepíšeš všechny aktuálně nastavené výšky a nelze to vrátit zpět!.\nPrvní slot Materiálu bude použit jako materiál země, ostatní budou automaticky namapovány podle výšky buňky.",
+                "height": "Maximální výška",
+                "cave": "Jeskyně",
+                "dungeon": "Kobka",
+                "landscape": "Vlastní",
+                "generate": "Generovat",
+                "theme": "Téma",
+                "shore": "Pobřeží",
+                "hills": "Kopce",
+                "mountains": "Hory",
+                "plateau": "Náhorní plošina",
+                "valley": "Údolí",
+                "island": "Ostrov"
+            },
+            "themes": {
+                "firelands": "Ohnivá země",
+                "desert": "Poušť",
+                "plains": "Pláně",
+                "wood": "Les",
+                "frost": "Mráz",
+                "jungle": "Ruiny v džungli",
+                "crypt": "Krypta",
+                "alien": "Mimozemské",
+                "tech": "Technologie",
+                "tmcArabianNights": "Arabské noci",
+                "tmcNature": "Příroda",
+                "tmcDungeon": "Kobka"
+            },
+            "material": {
+                "name": "Název",
+                "cellColor": "Barva buňky",
+                "tint": "Barva tónování",
+                "texture": "Textura",
+                "repeat": "Opakování",
+                "rotate": "Náhodně",
+                "metalness": "Kovovost",
+                "roughness": "Drsnost",
+                "opacity": "Krytí",
+                "emissive": "Svítivost"
+            },
+            "bevel": "Zkosení",
+            "zoom": "Přiblížení",
+            "rows": "Řádky",
+            "columns": "Sloupce"
+        },
+        "sharing": {
+            "sharemap": {
+                "agreement": "Sdílením této mapy potvrzuješ, že máš práva ji sdílet a že neporušuješ žádné podmínky služby u žádného z použitých zdrojů. Souhlasíš také s tím, že mapa bude uložena na serveru 3D Canvas a může být kdykoli odstraněna.",
+                "imageinfo": "Nahraj prosím snímek obrazovky mapy na imgur a vlož odkaz do pole obrázku. Pokud bude správný, obrázek se zobrazí v náhledu.",
+                "title": "Sdílet mapu",
+                "name": "Název mapy",
+                "description": "Popis",
+                "author": "Autor",
+                "image": "Obrázek",
+                "imageplaceholder": "URL obrázku",
+                "share": "Sdílet",
+                "error": "Došlo k chybě",
+                "preview": "Náhled obrázku",
+                "secret": "Tajný klíč",
+                "secretinfo": "Upozornění: klíč není ukládán v šifrovaném formátu. Doporučuje se použít automaticky vygenerovaný náhodný klíč; bude automaticky uložen pro budoucí použití, pokud se rozhodneš odeslat novou verzi mapy.",
+                "missingfields": "3D Canvas: Sdílení mapy | Chybí jedno nebo více polí, nebo nebyl vybrán žádný balíček zdrojů",
+                "gamemaster": "'Gamemaster' není povolené jméno autora.",
+                "assetpacks": "Balíčky zdrojů",
+                "assetinfo": "Sdílená mapa nebude obsahovat vlastní zdroje. Používej prosím hlavně zdroje zahrnuté v povolených balíčcích. Ctrl + kliknutím vybereš více balíčků.",
+                "confirm": {
+                    "title": "Potvrzení sdílení mapy",
+                    "content": "Opravdu chceš sdílet tuto mapu? Po sdílení nebudeš moci upravovat sdílený obsah."
+                },
+                "success": {
+                    "titleupdated": "Mapa aktualizována",
+                    "title": "Mapa sdílena",
+                    "content": "Mapa byla úspěšně sdílena. Mapa je nyní dostupná pro všechny, aby si ji mohli užít. Díky za sdílení!"
+                }
+            },
+            "mapbrowser": {
+                "title": "Prohlížeč map: dostupných map {count}",
+                "createJournal": "Vytvořit poznámky scény s informacemi o importovaných scénách",
+                "imported": "Importovaná scéna",
+                "search": "Začni psát pro vyhledávání..."
+            },
+            "packs": {
+                "baileywiki": "Baileywiki",
+                "mapmakingpack": "Mapmaking Pack",
+                "tokencollection": "Token Collection"
+            },
+            "error": "Příliš mnoho požadavků, zkus to prosím později.",
+            "scenedirbutton": "Procházet komunitní 3D mapy",
+            "contextbutton": "Sdílet scénu"
+        },
+        "keybindings": {
+            "dialog": {
+                "title": "3D Canvas: Odebrat základní klávesové zkratky",
+                "content": "Aby se ovládání 3D Canvas nepřekrývalo se základním ovládáním, důrazně se doporučuje odebrat základní klávesové zkratky WASD. Tokeny a jiné entity budeš stále moci přesouvat pomocí šipek či numerické klávesnice. Chceš je odebrat?"
+            },
+            "lockcamera": "Zapnout automatický režim kamery (pouze herní kamera)",
+            "gameCameraTopDown": "Přepnout kameru shora (pouze herní kamera)",
+            "removeWaypoint": "Odstranit bod pravítka",
+            "toggleFirstPerson": "Přepnout pohled z první osoby",
+            "toggleCameraLockPosition": "Uzamknout kameru na místě (podržet)",
+            "rotate": "Editor dlaždic: Otáčet",
+            "translate": "Editor dlaždic: Posunout",
+            "toggleGizmo": "Editor dlaždic: Přepnout manipulátor",
+            "toggleSelect": "Skupinový výběr (podrž při tažení)",
+            "resetView": "Resetovat pohled kamery",
+            "topdownView": "Pohled kamery shora",
+            "cameraToToken": "Zaměřit kameru na vybraný token",
+            "panUp": "Kamera: Posun nahoru",
+            "panDown": "Kamera: Posun dolů",
+            "panLeft": "Kamera: Posun vlevo",
+            "panRight": "Kamera: Posun vpravo",
+            "freeMode": "Režim volného umístění",
+            "pingcamera": "Pingnout a přesunout kameru na aktuální pohled pro všechny klienty",
+            "ping": "Pingnout aktuální pozici kurzoru pro všechny klienty",
+            "scaleWidth": "Editor dlaždic: Měřítko šířky",
+            "scaleHeight": "Editor dlaždic: Měřítko výšky",
+            "scaleGap": "Editor dlaždic: Měřítko mezery",
+            "scale": "Editor dlaždic: Měřítko",
+            "scaleScale": "Editor dlaždic: Měřítko měřítka dlaždice",
+            "toggleMode": "Editor dlaždic: Přepnout styl výplně",
+            "tiltX": "Editor dlaždic: Naklonit X",
+            "tiltY": "Editor dlaždic: Naklonit Y"
+        },
+        "flags": {
+            "emote": {
+                "header": "3D Canvas",
+                "label": "Emote",
+                "notes": "Vyber vlastní hráčskou emoci pro použití s taktickými pingy 3D Canvas."
+            },
+            "meshStats": "Vrcholy: %v% | Trojúhelníky: %t% | Meshes: %m% | Instance: %i%",
+            "maxElevation": {
+                "label": "Maximální výška",
+                "notes": "Maximální povolená výška tokenů na této scéně."
+            },
+            "grounding": {
+                "label": "Uzemnění",
+                "notes": "Zabraňuje hráčským tokenům ukončit pohyb ve vzduchu.",
+                "options": {
+                    "none": "Žádné",
+                    "notFlying": "Pouze pokud nelétá",
+                    "always": "Vždy"
+                }
+            },
+            "offset": {
+                "x": {
+                    "label": "Posun X"
+                },
+                "y": {
+                    "label": "Posun Y"
+                },
+                "z": {
+                    "label": "Posun Z"
+                }
+            },
+            "positional": {
+                "label": "3D Canvas: Prostorový zvuk",
+                "notes": "Upravuje hlasitost tohoto zvuku podle vzdálenosti od kamery. Vyžaduje zapnuté 'Snížení objemu'."
+            },
+            "doorType": {
+                "options": {
+                    "none": "Žádné",
+                    "door": "Dveře",
+                    "secret": "Tajné"
+                }
+            },
+            "textureMode": {
+                "label": "Režim textury",
+                "options": {
+                    "stretch": "Roztáhnout",
+                    "repeat": "Opakovat"
+                }
+            },
+            "textureRepeat": {
+                "label": "Opakování textury"
+            },
+            "flipY": {
+                "label": "Převrátit texturu svisle?"
+            },
+            "doorState": {
+                "options": {
+                    "open": "Otevřeno",
+                    "closed": "Zavřeno",
+                    "locked": "Zamčeno"
+                }
+            },
+            "doorStyle": {
+                "label": "Styl dveří",
+                "options": {
+                    "transparent": "Průhledné",
+                    "animate": "Animované (Osa otáčení)",
+                    "slide": "Animované (Posun do strany)",
+                    "slideVertical": "Animované (Posun svislý)",
+                    "linkWithAnimation": "Propojit s animací 3D modelu",
+                    "linkWithAnimationReversed": "Propojit s jednou animací 3D modelu"
+                }
+            },
+            "doorAnimateAngle": {
+                "label": "Úhel animace dveří"
+            },
+            "doorAnimationDuration": {
+                "label": "Délka animace dveří",
+                "units": "ms"
+            },
+            "doorSlidePercent": {
+                "label": "Procento posunu dveří"
+            },
+            "doorGrabTokens": {
+                "label": "Má zastavovat tokeny?",
+                "notes": "Po zaškrtnutí budou tokeny v blízkosti dveří zachyceny po zahájení svého pohybu. Nefunguje se stylem 'Průhledné'. Tokeny nebudou zachyceny během pohybu, pouze při jeho zahájení."
+            },
+            "isFog": {
+                "label": "Je to oblast válečné mlhy?",
+                "notes": "Po zaškrtnutí bude po vstoupu kamery do této šablony zastřen pohled. Funguje pouze pro obdélníkové šablony."
+            },
+            "enablePlayers": {
+                "label": "Smí hráči zapínat 3D?",
+                "notes": "Zaškrtnutí povolí hráčům v této scéně aktivovat 3D režim. Pokud není zapnutá válečná mlha, bude mapa plně viditelná."
+            },
+            "auto3d": {
+                "label": "3D režim při načtení?"
+            },
+            "pixel": {
+                "label": "Používat pixelizaci?"
+            },
+            "bloom": {
+                "label": "Používat záři?"
+            },
+            "bloomThreshold": {
+                "label": "Prahová hodnota záře"
+            },
+            "bloomStrength": {
+                "label": "Síla záře"
+            },
+            "bloomRadius": {
+                "label": "Poloměr záře"
+            },
+            "filter": {
+                "label": "Filtr",
+                "options": {
+                    "none": "Žádný",
+                    "grayscale": "Odstíny šedi",
+                    "sepia": "Sépie",
+                    "invert": "Invertovat",
+                    "brightness": "Jas",
+                    "contrast": "Kontrast",
+                    "saturate": "Sytost",
+                    "hue": "Odstín",
+                    "custom": "Vlastní"
+                }
+            },
+            "filterStrength": {
+                "label": "Síla filtru"
+            },
+            "filterCustom": {
+                "label": "Vlastní filtr",
+                "placeholder": "např. brightness(0.5) contrast(1.5) saturate(0.5) (jas(0,5) kontrast(1,5) sytost(0,5))"
+            },
+            "skybox": {
+                "label": "Obrázek skyboxu",
+                "placeholder": "Obrázek skyboxu",
+                "notes": "Soubor musí být ve stejné složce ve formě 6 souborů, názvy musí obsahovat _ft, _bk, _up, _dn, _rt, _lf."
+            },
+            "exr": {
+                "label": "Skybox",
+                "placeholder": "Soubor EXR či 360° panoramatický obrázek",
+                "notes": "Podporuje soubory .EXR nebo obrázky ve formátu 360° panoramatu. HDRI bude použito jako pozadí a k nasvícení scény."
+            },
+            "exposure": {
+                "label": "Expozice",
+                "notes": "Expozice pro HDRI. 1 je výchozí hodnota, 2 je nejsvětlejší a 0 je nejtmavší."
+            },
+            "renderTable": {
+                "label": "Oblast okraje",
+                "notes": "Jak zobrazit oblast okraje v 3D režimu.",
+                "options": {
+                    "none": "Žádné",
+                    "table": "Stůl (vlastní)",
+                    "matpaper": "Nekonečná podložka (papír)",
+                    "matwood": "Nekonečná podložka (dřevo)",
+                    "matcloth": "Nekonečná podložka (látka)",
+                    "matblueprint": "Nekonečná podložka (plán)",
+                    "matcustom": "Nekonečná podložka (vlastní)"
+                }
+            },
+            "tableTex": {
+                "label": "Textura okraje",
+                "placeholder": "Textura okraje"
+            },
+            "tableHeightmap": {
+                "label": "Výšková mapa okraje",
+                "placeholder": "Výšková mapa okraje"
+            },
+            "tableHeightmapScale": {
+                "label": "Měřítko výškové mapy"
+            },
+            "tableColor": {
+                "label": "Tónování okraje"
+            },
+            "renderBackground": {
+                "label": "Zobrazovat pozadí?",
+                "notes": "Po zaškrtnutí bude coby herní deska zobrazen obrázek pozadí scény."
+            },
+            "enableGrid": {
+                "label": "Povolit mřížku"
+            },
+            "enableRuler": {
+                "label": "Povolit pravítko?"
+            },
+            "enableAnimationScripts": {
+                "label": "Povolit skripty?",
+                "notes": "Zaškrtnutí umožní spouštění animačních skriptů dlaždic. VAROVÁNÍ: Ujisti se, že důvěřuješ zdroji scény, může být potenciálně zneužito ke spuštění škodlivého kódu."
+            },
+            "enableFogOfWar": {
+                "label": "Povolit válečnou mlhu (náročné na výkon)?",
+                "notes": "Náročné na výkon. Tato volba zapne 3D válečnou mlhu. Pokud je zaškrtnuto 'Používat pro kalkulaci výhledu 3D geometrii', bude válečná mlha počítána podle 3D geometrie (stále však bude dvourozměrná)."
+            },
+            "bakeLights": {
+                "label": "Předpočítat světla",
+                "notes": "Předpočítá vrhání stínů světel při načtení scény. Nebudou dynamická, ale nebudou procházet zdmi."
+            },
+            "enableFog": {
+                "label": "Povolit mlhu?"
+            },
+            "fogColor": {
+                "label": "Barva mlhy"
+            },
+            "fogDistance": {
+                "label": "Vzdálenost mlhy"
+            },
+            "sceneTint": {
+                "label": "Tónování scény"
+            },
+            "timeSync": {
+                "label": "Automatické osvětlení",
+                "options": {
+                    "off": "Vypnuto",
+                    "time": "Synchronizovat pozici s časem světa",
+                    "darkness": "Synchronizovat expozici s tmavostí scény",
+                    "both": "Synchronizovat obojí (funguje nejlépe s modulem SmallTime)"
+                }
+            },
+            "lockCamera": {
+                "label": "Uzamknout perspektivu kamery",
+                "options": {
+                    "off": "Vypnuto",
+                    "players": "Pouze hráči",
+                    "all": "Všichni"
+                }
+            },
+            "sunPosition": {
+                "label": "Denní doba (24 h.)"
+            },
+            "sunDistance": {
+                "label": "Vzdálenost slunce"
+            },
+            "sunTilt": {
+                "label": "Náklon slunce"
+            },
+            "sunIntensity": {
+                "label": "Intenzita slunce"
+            },
+            "ambientLightIntensity": {
+                "label": "Intenzita okolního světla",
+                "notes": "Určuje sílu globálního zdroje světla, který rovnoměrně osvětluje všechny povrchy. Toto světlo je jednotné a nevrhá ani nepřijímá stíny."
+            },
+            "ambientLightColor": {
+                "label": "Barva okolního světla"
+            },
+            "shadowBias": {
+                "label": "Posun stínů",
+                "notes": "Hodnota určující vykreslování stínů. Pokud si všimneš černých pruhů na objektech ve scéně, pak toto číslo uprav. Správné hodnoty bývají velmi malé; doporučuje se měnit je o 0.00001 i méně."
+            },
+            "showSceneWalls": {
+                "label": "Vykreslovat zdi?"
+            },
+            "showSceneDoors": {
+                "label": "Vykreslovat dveře?"
+            },
+            "showSceneFloors": {
+                "label": "Vykreslovat dlaždice?"
+            },
+            "initialview": {
+                "label": "Výchozí kamera",
+                "notes": "Výchozí pozice kamery při načtení scény. Před uložením pomocí pingu nastav cíl.",
+                "button": "Uložit pohled kamery",
+                "buttondel": "Vyčistit uložený pohled kamery"
+            },
+            "font": {
+                "label": "Písmo",
+                "notes": "JSON písmo použité pro dynamický textový mesh."
+            },
+            "wallFloorAlpha": {
+                "label": "Alfa zdí/podlahy"
+            },
+            "renderSceneLights": {
+                "label": "Vykreslovat světla?"
+            },
+            "mirrorLevels": {
+                "label": "Zrcadlit viditelnost dlaždic Levels?"
+            },
+            "object3dSight": {
+                "label": "Používat pro kalkulaci výhledu 3D geometrii?"
+            },
+            "enableGameCamera": {
+                "label": "Povolit herní kameru?",
+                "notes": "Zaškrtnutí povolí v této sccéně herní kameru. Ta musí být globálně povolena i v nastavení 3D Canvas."
+            },
+            "model3d": {
+                "label": "3D model"
+            },
+            "rotation": {
+                "label": "Rotace"
+            },
+            "dynaMesh": {
+                "label": "Dynamická síť",
+                "options": {
+                    "optgroup": {
+                        "basic": "Základní",
+                        "complex": "Složité",
+                        "advanced": "Pokročilé",
+                        "interactive": "Interaktivní",
+                        "special": "Speciální"
+                    },
+                    "default": "Žádné (použít 3D model)",
+                    "box": "Kvádr",
+                    "plane": "Rovina",
+                    "sphere": "Koule",
+                    "cylinder": "Válec",
+                    "cone": "Kužel",
+                    "tube": "Trubice",
+                    "dome": "Kopule",
+                    "billboard": "Billboard",
+                    "billboard2": "Billboard (kříž)",
+                    "text": "Text (pro text použij pole 3D model)",
+                    "decal": "Nálepka",
+                    "stairs": "Schody",
+                    "vines": "Liány",
+                    "paper": "Papírový výřez",
+                    "rock": "Kámen (krychle)",
+                    "rocksphere": "Kámen (koule)",
+                    "rockcylinder": "Kámen (válec)",
+                    "rockcone": "Kámen (kužel)",
+                    "polygon": "Polygon",
+                    "polygonbevel": "Polygon (zkosení)",
+                    "polygonsolidify": "Polygon (zpevnění)",
+                    "polygonbevelsolidify": "Polygon (zkosení + zpevnění)",
+                    "polygonbevelsolidifyjagged": "Polygon (zubatý zakřivený)",
+                    "polygonbevelsolidifyjaggeddouble": "Polygon (zubatý dvojitý)",
+                    "polygonbevelsolidifyjaggedstraight": "Polygon (zubatý rovný)",
+                    "polygonlathe": "Polygon (soustružení)",
+                    "polygonchain": "Polygon (řetěz)",
+                    "counter": "Počítadlo",
+                    "counterradial": "Počítadlo – výseč",
+                    "mapGen": "Generátor map"
+                }
+            },
+            "dynaMeshResolution": {
+                "label": "Rozlišení dynamického meshe"
+            },
+            "imageTexture": {
+                "label": "Textura"
+            },
+            "gmOnlyInteractive": {
+                "label": "Interakce pouze pro GM"
+            },
+            "displacementMap": {
+                "label": "Výšková mapa/mapa intenzity"
+            },
+            "invertDisplacementMap": {
+                "label": "Invertovat výškovou mapu/mapu intenzity"
+            },
+            "displacementIntensity": {
+                "label": "Intenzita výškové mapy"
+            },
+            "displacementMatrix": {
+                "label": "Matice výškové mapy"
+            },
+            "wallSidesTexture": {
+                "label": "Textura boků"
+            },
+            "wallSidesTint": {
+                "label": "Tónování boků"
+            },
+            "onAnimation": {
+                "label": "Animační funkce"
+            },
+            "fillType": {
+                "header": "Dláždění",
+                "tabNotes": "Zda opakovat 3D model vícekrát, nebo roztáhnout tak, aby vyplnil dlaždici",
+                "label": "Jak výplnit",
+                "options": {
+                    "stretch": "Roztáhnout",
+                    "tile": "Opakovat",
+                    "merged": "Sloučená dlaždice"
+                }
+            },
+            "enableGravity": {
+                "label": "Gravitace",
+                "options": {
+                    "none": "Vypnuto",
+                    "gravity": "Pouze gravitace",
+                    "gravityRotation": "Gravitace + rotace povrchu"
+                }
+            },
+            "depth": {
+                "label": "Hloubka"
+            },
+            "material": {
+                "label": "Materiál",
+                "header": "Materiál",
+                "tabNotes": "Vizuální vlastnosti materiálu použitého na této dlaždici. Posuvníky nastavené na -0.01 použijí výchozí hodnotu materiálu",
+                "options": {
+                    "none": "Výchozí",
+                    "optgroup": {
+                        "presets": "Předvolby",
+                        "advanced": "Pokročilé"
+                    },
+                    "presets": {
+                        "basic-plastic": "Základní plast",
+                        "premium-plastic": "Prémiový plast",
+                        "steel": "Ocel",
+                        "bronze": "Bronz",
+                        "copper": "Měď",
+                        "hammered-steel": "Tepaná ocel",
+                        "leather": "Kůže",
+                        "marble": "Mramor",
+                        "wood": "Dřevo"
+                    },
+                    "basic": "Základní (bez světla/stínů)",
+                    "texcol": "Textura/Barva",
+                    "plastic": "Plast",
+                    "wood": "Dřevo",
+                    "metal": "Kov",
+                    "pbr": "PBR"
+                }
+            },
+            "color": {
+                "label": "Barva",
+                "notes": "Materiál a barva fungují pouze u některých modelů, obvykle u šedých či neotexturovaných."
+            },
+            "tint": {
+                "label": "Tónování"
+            },
+            "shading": {
+                "label": "Stínování",
+                "options": {
+                    "default": "Výchozí",
+                    "flat": "Ploché",
+                    "smooth": "Hladké"
+                }
+            },
+            "sides": {
+                "label": "Strana",
+                "options": {
+                    "default": "Výchozí",
+                    "FrontSide": "Přední strana",
+                    "BackSide": "Zadní strana",
+                    "DoubleSide": "Oboustranné"
+                }
+            },
+            "basic": {
+                "header": "Základní",
+                "tabNotes": "Nastavení 3D modelu, jeho umístění a možnosti měřítka"
+            },
+            "effects": {
+                "header": "Efekty",
+                "tabNotes": "Speciální efekty aplikované na tuto dlaždici"
+            },
+            "noise": {
+                "header": "Šum",
+                "tabNotes": "Procedurální šum aplikovaný na model pro vytvoření deformace",
+                "label": "Typ šumu",
+                "options": {
+                    "none": "Žádný",
+                    "simplex": "Simplexní",
+                    "perlin": "Perlinův"
+                }
+            },
+            "noiseScale": {
+                "label": "Měřítko šumu"
+            },
+            "noiseHeight": {
+                "label": "Výška"
+            },
+            "noisePersistence": {
+                "label": "Soudržnost detailů"
+            },
+            "noiseOctaves": {
+                "label": "Počet vrstev"
+            },
+            "noiseLacunarity": {
+                "label": "Členitost"
+            },
+            "noiseExponent": {
+                "label": "Exponent"
+            },
+            "noiseFlattening": {
+                "label": "Zploštění"
+            },
+            "shaderIntensity": {
+                "label": "Intenzita shaderu"
+            },
+            "shaderSpeed": {
+                "label": "Rychlost"
+            },
+            "shaderOther": {
+                "label": "Shader – jiné"
+            },
+            "shaderOther2": {
+                "label": "Shader – jiné 2"
+            },
+            "shaderAlt": {
+                "label": "Použít alternativní režim"
+            },
+            "baseColor": {
+                "label": "Základní barva"
+            },
+            "disableBase": {
+                "label": "Zakázat podstavu?"
+            },
+            "removeBase": {
+                "label": "Odebrat podstavu?",
+                "notes": "Odebere podstavu původního modelu. Funguje pouze, pokud je podstava v datech 3D modelu pojmenována 'base'."
+            },
+            "solidBaseMode": {
+                "label": "Režim podstavy",
+                "options": {
+                    "default": "Výchozí",
+                    "merge": "Sloučit",
+                    "ontop": "Navrchu"
+                }
+            },
+            "draggable": {
+                "label": "Přetahovatelné"
+            },
+            "alwaysVisible": {
+                "label": "Vždy viditelné"
+            },
+            "enableAnim": {
+                "label": "Povolit animaci (pokud existuje)?"
+            },
+            "animIndex": {
+                "label": "Index animace"
+            },
+            "animationOnce": {
+                "label": "Přehrát jen jednou?"
+            },
+            "linkWithDoorState": {
+                "label": "Propojit se stavem dveří"
+            },
+            "animSpeed": {
+                "label": "Rychlost animace"
+            },
+            "forceFlyingMode": {
+                "label": "Vynutit létání?"
+            },
+            "paused": {
+                "label": "Pozastaveno"
+            },
+            "faceCamera": {
+                "label": "Režim natočení ke kameře",
+                "options": {
+                    "default": "Globální nastavení (výchozí)",
+                    "face": "Natočit ke kameře",
+                    "noface": "Nenatáčet ke kameře"
+                }
+            },
+            "rotationAxis": {
+                "label": "Osa rotace",
+                "options": {
+                    "x": "X",
+                    "z": "Z",
+                    "y": "Y"
+                },
+                "notes": "Osa použitá při změně rotace původního tokenu. Pokud byl původní soubor ve formátu STL, obvykle je to Z, jinak Y."
+            },
+            "autoCenter": {
+                "label": "Automaticky vycentrovat?"
+            },
+            "autoGround": {
+                "label": "Automaticky usadit na zem?"
+            },
+            "rotationX": {
+                "label": "Rotace X"
+            },
+            "rotationY": {
+                "label": "Rotace Y"
+            },
+            "rotationZ": {
+                "label": "Rotace Z"
+            },
+            "rotateBase": {
+                "label": "Opravit rotaci základu",
+                "notes": "Některé modely vyžadují pootočení indikátoru výběru, zapni dle potřeby (obvykle u souborů převedených z STL)."
+            },
+            "offsetX": {
+                "label": "Posun X"
+            },
+            "offsetY": {
+                "label": "Posun Y"
+            },
+            "offsetZ": {
+                "label": "Posun Z"
+            },
+            "scale": {
+                "label": "Měřítko"
+            },
+            "yScale": {
+                "label": "Měřítko Y"
+            },
+            "tileScale": {
+                "label": "Měřítko dlaždice"
+            },
+            "gap": {
+                "label": "Mezera"
+            },
+            "tilt": {
+                "label": "Náklon"
+            },
+            "tiltX": {
+                "label": "Náklon X"
+            },
+            "tiltZ": {
+                "label": "Náklon Y"
+            },
+            "randomRotation": {
+                "label": "Náhodná rotace"
+            },
+            "randomColor": {
+                "label": "Náhodná barva"
+            },
+            "randomDepth": {
+                "label": "Náhodná hloubka"
+            },
+            "randomScale": {
+                "label": "Náhodné měřítko"
+            },
+            "randomPosition": {
+                "label": "Náhodná pozice"
+            },
+            "randomSeed": {
+                "label": "Náhodné semínko"
+            },
+            "maxInstances": {
+                "label": "Max. počet instancí"
+            },
+            "tiling": {
+                "label": "Možnosti dlaždicování"
+            },
+            "shader": {
+                "header": "Shadery"
+            },
+            "attachments": {
+                "header": "Přílohy",
+                "tabNotes": "Nastav k tomuto tokenu přílohy. Pro přidání přílohy vyber token, přepni se na vrstvu dlaždic, umísti dlaždici, kterou chceš připojit, na token, klikni na ni pravým tlačítkem a zvol možnost 'Připojit dlaždici k tokenu'.",
+                "filename": "Název přílohy",
+                "info": "Dlaždice %s připojena k tokenu "
+            },
+            "wallOpacity": {
+                "label": "Průhlednost"
+            },
+            "roughness": {
+                "label": "Drsnost"
+            },
+            "metalness": {
+                "label": "Odrazivost"
+            },
+            "transparency": {
+                "label": "Průhlednost"
+            },
+            "alphaClip": {
+                "label": "Ořez alfa"
+            },
+            "transmission": {
+                "label": "Propustnost"
+            },
+            "ior": {
+                "label": "Index lomu"
+            },
+            "wallDepth": {
+                "label": "Hloubka zdi"
+            },
+            "joinWall": {
+                "label": "Spojit se zdí"
+            },
+            "stretchTex": {
+                "label": "Roztáhnout texturu"
+            },
+            "tcollision": {
+                "label": "Blokovat pohyb?"
+            },
+            "tsight": {
+                "header": "Vidění",
+                "tabNotes": "Vlastnosti vidění, blokování světla a kolizí této dlaždice",
+                "label": "Blokovat vidění?"
+            },
+            "aura": {
+                "header": "Aury"
+            },
+            "advanced": {
+                "header": "Pokročilé"
+            },
+            "position": {
+                "header": "Pozice",
+                "tabNotes": "Pozice, měřítko a rotace. Můžeš nastavit i posun (slouží ke změně bodu otáčení dlaždice, nefunguje u sloučených dlaždic). Některé vlastnosti, jako šířka, výška a rotace, najdeš v běžné záložce 'Pozice' v nastavení dlaždice"
+            },
+            "auraRange": {
+                "label": "Dosah aury"
+            },
+            "auraColor": {
+                "label": "Barva aury"
+            },
+            "tcameraCollision": {
+                "label": "Kolize kamery?"
+            },
+            "sightMeshComplexity": {
+                "label": "Rozlišení kolizní zóny"
+            },
+            "highlightOnHover": {
+                "label": "Zvýraznit po přejetí?"
+            },
+            "enableCollision": {
+                "label": "Povolení kolize",
+                "options": {
+                    "0": "Vypnuto",
+                    "1": "Zapnuto (od tokenu)",
+                    "2": "Zapnuto (od oblohy)"
+                }
+            },
+            "stem": {
+                "label": "Povolit stonek?"
+            },
+            "collisionPlane": {
+                "label": "Kolizní rovina"
+            },
+            "castShadow": {
+                "label": "Má vrhat stín?",
+                "notes": "Zaškrtnutí povolí vrhání stínu světlem. VAROVÁNÍ: vysoký dopad na výkon!"
+            },
+            "visibleWhenDisabled": {
+                "label": "Viditelné při vypnutí",
+                "notes": "Pokud je světlo vypnuté, zůstane viditelné. Neposkytne zdroj vidění, ale stále aplikuje vizuální efekt osvětlení."
+            },
+            "postprocessing": {
+                "header": "Postprocessing",
+                "notes": "Postprocessing efekty aplikované na scénu",
+                "enabled": {
+                    "label": "Povolit?"
+                },
+                "vignette": {
+                    "label": "Vinětace"
+                },
+                "chromaticAberration": {
+                    "label": "Barevná odchylka"
+                },
+                "grain": {
+                    "label": "Zrno"
+                },
+                "tint": {
+                    "label": "Tónování"
+                },
+                "contrast": {
+                    "label": "Kontrast"
+                },
+                "brightness": {
+                    "label": "Jas"
+                },
+                "saturation": {
+                    "label": "Sytost"
+                }
+            },
+            "particlePreset": {
+                "label1": "Předvolba částic 1",
+                "label2": "Předvolba částic 2",
+                "notes": "Předvolba použitá pro částicové efekty.",
+                "options": {
+                    "none": "Žádná",
+                    "rain": "Déšť",
+                    "heavyrain": "Silný déšť",
+                    "snow": "Sníh",
+                    "hail": "Krupobití",
+                    "sand": "Písečná bouře",
+                    "leaves": "Listí",
+                    "embers": "Žhavé uhlíky",
+                    "mysteriouslights": "Tajemná světla",
+                    "stars": "Hvězdy",
+                    "starfall": "Padající hvězdy (JB2A)",
+                    "smoke": "Kouř",
+                    "toxic": "Toxické výpary",
+                    "dust": "Prach",
+                    "custom": "Vlastní"
+                }
+            },
+            "particleTexture": {
+                "label": "Textura"
+            },
+            "particleColor": {
+                "label": "Barva"
+            },
+            "particleSize": {
+                "label": "Velikost"
+            },
+            "particleSpeed": {
+                "label": "Rychlost"
+            },
+            "particleDensity": {
+                "label": "Hustota"
+            },
+            "particleDirection": {
+                "label": "Směr"
+            },
+            "particleOpacity": {
+                "label": "Průhlednost"
+            },
+            "particleVelocity": {
+                "label": "Rychlost pohybu"
+            },
+            "particleBlending": {
+                "label": "Prolínání"
+            },
+            "particleGroundOffset": {
+                "label": "Posun od země"
+            },
+            "particleRandomRotation": {
+                "label": "Náhodná rotace"
+            },
+            "particleRandomScale": {
+                "label": "Náhodná velikost"
+            },
+            "particleRotationspeed": {
+                "label": "Rychlost rotace"
+            },
+            "particleBlend": {
+                "label": "Režim prolínání"
+            },
+            "lightParticleEffect": {
+                "ParticleType": {
+                    "label": "Předvolba částic",
+                    "options": {
+                        "optgroup": "Směrové (vyžaduje úhel emise)"
+                    }
+                },
+                "ParticlePosition": {
+                    "label": "Pozice",
+                    "options": {
+                        "surface": "Povrch",
+                        "center": "Střed"
+                    }
+                },
+                "ParticleRadius": {
+                    "label": "Poloměr"
+                },
+                "ParticleIntensity": {
+                    "label": "Intenzita"
+                },
+                "ParticleSprite": {
+                    "label": "2D objekt"
+                },
+                "ParticleScale": {
+                    "label": "Měřítko"
+                },
+                "ParticleEmitterSizeMultiplier": {
+                    "label": "Násobitel oblasti"
+                },
+                "ParticleColor": {
+                    "label": "Primární barva"
+                },
+                "ParticleColor2": {
+                    "label": "Sekundární barva"
+                },
+                "ParticleForce": {
+                    "label": "Síla"
+                },
+                "ParticleLife": {
+                    "label": "Životnost"
+                },
+                "ParticleCount": {
+                    "label": "Počet"
+                },
+                "ParticleEmitTime": {
+                    "label": "Doba emise"
+                },
+                "ParticleMass": {
+                    "label": "Hmotnost"
+                },
+                "ParticleGravity": {
+                    "label": "Gravitace"
+                },
+                "enableParticle": {
+                    "label": "Povolit částicový efekt"
+                },
+                "enableParticleHidden": {
+                    "label": "Nechat částice i po skrytí/vypnutí?"
+                },
+                "ParticleAlphaStart": {
+                    "label": "Počáteční průhlednost"
+                },
+                "ParticleAlphaEnd": {
+                    "label": "Koncová průhlednost"
+                },
+                "ParticlePushX": {
+                    "label": "Posun X"
+                },
+                "ParticlePushY": {
+                    "label": "Posun Y"
+                },
+                "ParticlePushZ": {
+                    "label": "Posun Z"
+                },
+                "header": {
+                    "title": "Částicový efekt",
+                    "notes": "Částicový efekt použitý pro světlo."
+                }
+            }
+        },
+        "settings": {
+            "autoApply": {
+                "name": "Aplikovat automaticky materiály?",
+                "hint": "Po zaškrtnutí bude materiál při výběru okamžitě aplikován na vybraný objekt."
+            },
+            "autoClose": {
+                "name": "Zavírat prohlížeč materiálů?",
+                "hint": "Po zaškrtnutí a výběru materiálu se prohlížeč materiálů automaticky zavře."
+            },
+            "allTokens": {
+                "name": "Zobrazit všechny tokeny?",
+                "hint": "Po odškrtnutí se zobrazují pouze nabarvené tokeny; po zaškrtnutí se budou zobrazovat všechny dostupné tokeny."
+            },
+            "autoAssignToken": {
+                "name": "Přiřazování 3D modelů",
+                "hint": "Po umístění nepropojeného tokenu na plátno se mu automaticky přiřadí 3D model, pokud žádný nemá.",
+                "options": {
+                    "0": "Vypnuto",
+                    "1": "Pouze 3D model",
+                    "2": "3D model a top-down token"
+                }
+            },
+            "assetBrowserCustomPath": {
+                "name": "Cesta ke zdrojům",
+                "hint": "Pokud chceš použít vlastní cestu pro prohlížeč zdrojů, pak ji nastav zde."
+            },
+            "rangeFinder": {
+                "name": "Měřič vzdálenosti",
+                "hint": "Zobrazí vzdálenost k tokenům po přejetí kurzorem.",
+                "options": {
+                    "none": "Vypnuto",
+                    "combat": "Pouze v boji",
+                    "always": "Vždy"
+                }
+            },
+            "useRaycastRuler": {
+                "name": "EXPERIMENTÁLNÍ: Adaptivní pravítko?",
+                "hint": "Po zaškrtnutí se bude pravítko držet terénu pod sebou, dokud token nelétá."
+            },
+            "resolutionMultiplier": {
+                "name": "Násobitel rozlišení",
+                "hint": "VAROVÁNÍ: Změna tohoto nastavení ovlivní i rozlišení 2D režimu. Vyžaduje znovunačtení."
+            },
+            "fogDebounce": {
+                "name": "Omezit aktualizace válečné mlhy?",
+                "hint": "Po odškrtnutí se budou výhled a válečná mlha vneustále obnovovat."
+            },
+            "sharedContext": {
+                "name": "Sdílet kontext?",
+                "hint": "Po zaškrtnutí se výkon válečné mlhy zlepší, ale nebude možné používat Mini Canvas."
+            },
+            "preapplyShaders": {
+                "name": "Přednačítat shadery?",
+                "hint": "Po zaškrtnutí budou shadery aplikovány před spuštěním vykreslovací smyčky. Zabrání to trhání při prvním zapnutí shaderů, ale může mírně ovlivnit výkon či dobu načítání."
+            },
+            "lightCacheSize": {
+                "name": "Velikost cache osvětlení",
+                "hint": "Počet světel ukládaných do cache pro každou scénu. Tento počet světel lze umístit/zapnout bez způsobení trhání."
+            },
+            "showAdvanced": {
+                "show": "Zobrazit pokročilá nastavení",
+                "wiki": "Zjistit více",
+                "hide": "Skrýt pokročilá nastavení",
+                "name": "Zobrazovat vždy pokročilá nastavení?",
+                "hint": "Po zaškrtnutí budou ve výchozím stavu v nabídkách zobrazována pokročilá nastavení."
+            },
+            "navigatorAuto": {
+                "name": "Režim sledování navigátoru",
+                "hint": "Automaticky při načtení scény zapne režim sledování 3D navigátoru.",
+                "options": {
+                    "none": "Nikdo",
+                    "players": "Pouze hráči",
+                    "all": "Hráči i GM"
+                }
+            },
+            "headers": {
+                "basics": {
+                    "title": "Základní",
+                    "notes": "Základní nastavení této 3D scény"
+                },
+                "environment": {
+                    "title": "Prostředí",
+                    "notes": "3D prostředí a efekty"
+                },
+                "lighting": {
+                    "title": "Osvětlení",
+                    "notes": "Globální osvětlení scény"
+                },
+                "particles": {
+                    "title": "Částice",
+                    "notes": "Částicové efekty (počasí atd.)"
+                },
+                "visibility": {
+                    "title": "Viditelnost",
+                    "notes": "Viditelnost 3D objektů"
+                }
+            },
+            "canping": {
+                "name": "Smí hráči pingovat?",
+                "hint": "Zaškrtnuí povolí hráčům pingovat místa (výchozí Shift+E)."
+            },
+            "canpingpan": {
+                "name": "Smí hráči odesílat pozici kamery?",
+                "hint": "Zaškrtnuí povolí hráčům odeslat pozici kamery (výchozí Shift+Q)."
+            },
+            "enableGameCamera": {
+                "name": "Povolit herní kameru?",
+                "hint": "Zaškrtnuí povolí kameru ve stylu videohry. Hráčům bude vnucena, GM ji může přepínat."
+            },
+            "gameCameraMinAngle": {
+                "name": "Minimální úhel",
+                "hint": "Minimální úhel (svislá rotace), na který lze kameru otočit."
+            },
+            "gameCameraMaxAngle": {
+                "name": "Maximální úhel",
+                "hint": "Maximální úhel (svislá rotace), na který lze kameru otočit."
+            },
+            "gameCameraMinAzimuth": {
+                "name": "Minimální azimut",
+                "hint": "Minimální azimut (vodorovná rotace), na který lze kameru otočit."
+            },
+            "gameCameraMaxAzimuth": {
+                "name": "Maximální azimut",
+                "hint": "Maximální azimut (vodorovná rotace), na který lze kameru otočit."
+            },
+            "gameCameraMaxZoom": {
+                "name": "Maximální přiblížení",
+                "hint": "Maximální úroveň přiblížení kamery. Vyšší hodnoty znamenají větší oddálení."
+            },
+            "gameCameraClipping": {
+                "name": "Ořezávat objekty?",
+                "hint": "Po zaškrtnutí bude skrývat objekty zakrývající aktuální cíl kamery."
+            },
+            "gameCameraDefaultGm": {
+                "name": "Má mít GM rovnou zapnutou kameru?",
+                "hint": "Po zaškrtnutí bude mít GM zapnutou herní kameru při prvním načtení scény."
+            },
+            "gameCameraAutoLock": {
+                "name": "Automaticky znovuzamykat?",
+                "hint": "Po zaškrtnutí a pokud je herní kamera odemčena od cíle, automaticky bude při změně cíle znovu uzamčena."
+            },
+            "gameCameraWarnings": {
+                "name": "Zobrazovat varování?",
+                "hint": "Po zaškrtnutí bude zobrazováno varování týkající se funkce herní kamery."
+            },
+            "configApp": {
+                "title": "Nastavení 3D Canvas",
+                "name": "Globální nastavení",
+                "label": "Nastavit globální 3D Canvas",
+                "hint": "Nastav globální nastavení 3D Canvas. Tato nastavení budou aplikována na všechny klienty. Všechna další nastavení pod tímto jsou specifická pro klienta.",
+                "save": "Uložit nastavení",
+                "tabs": {
+                    "canvas": "Plátno",
+                    "token": "Token",
+                    "base": "Podstava",
+                    "misc": "Různé",
+                    "perm": "Oprávnění",
+                    "gc": "Kamera",
+                    "tools": "Nástroje"
+                }
+            },
+            "baseStyle": {
+                "name": "Styl podstavy",
+                "hint": "Styl podstavy použitý pro všechny tokeny.",
+                "options": {
+                    "image": "Obrázek",
+                    "solid": "Plný",
+                    "solidindicator": "Plný + indikátor směru"
+                }
+            },
+            "solidBaseMode": {
+                "name": "Režim podstavy",
+                "hint": "'Sloučit' nepřesune původní model, 'Navrchu' posune model na horní část podstavy.",
+                "options": {
+                    "merge": "Sloučit",
+                    "ontop": "Navrchu"
+                }
+            },
+            "solidBaseColor": {
+                "name": "Barva podstavy",
+                "hint": "Barva plné podstavy. Může to být číselná hodnota či název barvy (či jakákoli CSS barva). Výchozí je #1c1c1c."
+            },
+            "highlightCombat": {
+                "name": "Používat v boji zvýrazňovač?",
+                "hint": "Po zaškrtnutí bude účastník boje, co je právě na řadě, zvýrazněn."
+            },
+            "startMarker": {
+                "name": "Umísťovat značku začátku kola?",
+                "hint": "Po zaškrtnutí bude v boji umísťována značka na místo, kde token začal kolo. Uvidí ji pouze vlastníci tohoto tokenu."
+            },
+            "selectedImage": {
+                "name": "Obrázek zvýraznění výběru",
+                "hint": "Obrázek zobrazený při výběru tokenu."
+            },
+            "colorizeInidcator": {
+                "name": "Obarvit zvýraznění",
+                "hint": "Obarví obrázek zvýraznění podle výchozích barev rámečku Foundry."
+            },
+            "enableReticule": {
+                "name": "Povolit zaměřovač?",
+                "hint": "Zaškrtnutí povolí zaměřovač pro zvýraznění tokenů, na které aktuální uživatel cílí. Vytvoří zaměřovač podobný 2D verzi."
+            },
+            "hideTarget": {
+                "name": "Skrývat indikátor cíle?",
+                "hint": "Zaškrtnutí skryje indikátor cíle, pokud má token zapnutou podstavu. Cílení bude zobrazeno v prstenci zvýraznění podstavy."
+            },
+            "hideEffects": {
+                "name": "Skrývat efekty?",
+                "hint": "Zaškrtnutí skryje indikátor efektů vznášející se nad tokenem."
+            },
+            "rotateIndicator": {
+                "name": "Otáčet podstavu?",
+                "hint": "Po zaškrtnutí se bude 3D podstava otáčet podle rotace tokenu."
+            },
+            "templateEffects": {
+                "name": "Používat efekty šablon?",
+                "hint": "Zaškrtnutí automaticky aplikuje shadery na šablony dle typu zranění. Aktuálně podporováno pouze dnd5e."
+            },
+            "templateAuto3D": {
+                "name": "Odvozovat 3D šablony?",
+                "hint": "Pokud není pro šablonu určen třetí rozměr, bude po zaškrtnutí odvozena (např. paprsek široký 5 stop bude mít výšku 5 stop)."
+            },
+            "lightHelpers": {
+                "name": "Pomocníci osvětlení?",
+                "hint": "Zaškrtnutí při práci ve vrstvě osvětlení zobrazí zdroj světla a oblast jeho efektu."
+            },
+            "templateSyle": {
+                "name": "Styl šablon",
+                "hint": "Styl použitý pro měřicí šablony.",
+                "options": {
+                    "wireframe": "Drátěný model",
+                    "solid": "Plný"
+                }
+            },
+            "paddingAppearance": {
+                "name": "Vzhled okraje",
+                "hint": "Výchozí vzhled okraje. Lze jej upravit i pro jednotlivé scény."
+            },
+            "gridMode": {
+                "name": "Režim vykreslení mřížky",
+                "hint": "Způsob vykreslení mřížky. Rychlý je obecně lepší, ale podporuje pouze čtvercovou mřížku. Zrcadlit přesně kopíruje mřížku Foundry, ale je náročnější na vykreslení.",
+                "options": {
+                    "fast": "Rychlý",
+                    "mirror": "Zrcadlit"
+                }
+            },
+            "autoPan": {
+                "name": "Automatické posouvání",
+                "hint": "Propojí posouvání 3D kamery s 2D režimem. Především pohyb tokenu způsobí, že jej kamera bude sledovat. Pokud je vypnuto, lze se vždy přesunout na vybraný token pomocí Ctrl+X.",
+                "options": {
+                    "none": "Vypnuto",
+                    "player": "Pouze hráči",
+                    "all": "Všichni"
+                }
+            },
+            "conservativeHitbox": {
+                "name": "Konzervativní hitbox",
+                "hint": "Omezí velikost hitboxu tokenů tak, aby nepřesahoval základnu tokenu."
+            },
+            "screenspacepanning": {
+                "name": "Posouvat prostorem obrazovky?",
+                "hint": "Zaškrtnutí povolí posouvání 3D režimu prostorem obrazovky (styl ovládání mapy)."
+            },
+            "altCameraControls": {
+                "name": "Ovládat kameru alternativně?",
+                "hint": "Po zaškrtnutí nebude levé tlačítko myši otáčet kameru. Otáčení bude na prostředním tlačítku myši."
+            },
+            "enabledamping": {
+                "name": "Povolit tlumení?",
+                "hint": "Zaškrtnutí povolí tlumení pohybu kamery. Pokud někdo trpí kinetózou, tuto možnost vypni. (Shift+R v 3D režimu obnoví kameru a aplikuje změnu)."
+            },
+            "camerafocuszoom": {
+                "name": "Přibližovat po zaměření kamery?",
+                "hint": "Po zaškrtnutí se po zaměření kamery na token pomocí Shift+X kamera přiblíží."
+            },
+            "standupFace": {
+                "name": "Stojánky čelem ke kameře?",
+                "hint": "Po zaškrtnutí budou 2D tokeny zobrazené jako stojánky vždy otočeny ke kameře."
+            },
+            "flatTokenStyle": {
+                "name": "Styl 2D tokenu",
+                "hint": "Styl použitý pro 2D tokeny, pokud není nastaven 3D model.",
+                "options": {
+                    "flat": "Plochý (čelem ke kameře)",
+                    "extruded": "Vytažený (stojící)",
+                    "coin": "Mince (shora)"
+                }
+            },
+            "useMultithreading": {
+                "name": "Použít vícevláknové zpracování",
+                "hint": "Použije více vláken pro zlepšení výkonu výpočtu mlhy války. Nemá žádný efekt, pokud válečnou mlhu nepoužíváš."
+            },
+            "miniCanvas": {
+                "name": "Povolit oddělené okno plátna?",
+                "hint": "Po zaškrtnutí bude po aktivaci 3D režimu v samostatném okně otevíráno 2d okno."
+            },
+            "pingsound": {
+                "name": "Zvuk pingu",
+                "hint": "Zvuk přehrávaný při pingnutí místa."
+            },
+            "preventNegative": {
+                "name": "Bránit záporné výšce?",
+                "hint": "Zaškrtnutí zabrání pohybu tokenu pod úroveň herní plochy."
+            },
+            "outline": {
+                "name": "Zvýrazňovat obrys?",
+                "hint": "Po zaškrtnutí bude po přejetí a výběru objektu na plátně zvýrazněn obrys. Pro lepší výkon vypni."
+            },
+            "fullTransparency": {
+                "name": "Skutečná průhlednost?",
+                "hint": "Aby se předešlo vizuálním artefaktům, 3D Canvas používá ořezávání alfy pro průhlednost, což může způsobit zubaté okraje. Pokud používáš málo průhledných textur, nebo pokud se nepřekrývají, můžeš tuto možnost zaškrtnout a získat lepší vzhled. Používej na vlastní riziko, může způsobit vizuální chyby."
+            },
+            "globalCollision": {
+                "name": "Povolit globální kolizi?",
+                "hint": "Zaškrtnutí povolí kolizi všem tokenům na scéně."
+            },
+            "antialiasing": {
+                "name": "Vyhlazování hran",
+                "hint": "Povolí vyhlazování hran za cenu mírného snížení výkonu. FXAA má téměř nulový dopad na výkon. SMAA poskytne lepší výsledky, ale může být o něco náročnější.",
+                "options": {
+                    "none": "Vypnuto",
+                    "fxaa": "FXAA",
+                    "smaa": "SMAA"
+                }
+            },
+            "fowQuality": {
+                "name": "Kvalita válečné mlhy",
+                "hint": "Nastaví rozlišení válečné mlhy.",
+                "options": {
+                    "native": "Nativní",
+                    "high": "Vysoká",
+                    "medium": "Střední",
+                    "low": "Nízká",
+                    "verylow": "Velmi nízká"
+                }
+            },
+            "dofblur": {
+                "name": "Hloubka ostrosti",
+                "hint": "Povolí rozostření hloubky ostrosti. Při přiblížení kamery k tokenu rozostří pozadí, aby působilo dojmem hry u stolu. Vyšší nastavení znamená větší rozostření, výkon není ovlivněn úrovní rozostření. Povolení může mít výrazný dopad na výkon.",
+                "options": {
+                    "off": "Vypnuto",
+                    "low": "Nízká",
+                    "medium": "Střední",
+                    "high": "Vysoká"
+                }
+            },
+            "disableLighting": {
+                "name": "Vypnout stíny",
+                "hint": "Vypne stíny pro lepší výkon."
+            },
+            "shadowQuality": {
+                "name": "Kvalita stínů",
+                "hint": "Rozlišení stínů. Pro jejich deaktivaci nastav na 'Vypnuto'.",
+                "options": {
+                    "none": "Vypnuto",
+                    "low": "Nízká",
+                    "medium": "Střední",
+                    "high": "Vysoká",
+                    "ultra": "Ultra",
+                    "gamer": "Gamer"
+                }
+            },
+            "enableShaders": {
+                "name": "Povolit shadery?",
+                "hint": "Zaškrtnutí povolí speciální efekty shaderů. Některé efekty mohou být náročné na výkon v závislosti na hardwaru a jejich množství. Pro lepší výkon vypni."
+            },
+            "enableEffects": {
+                "name": "Povolit efekty?",
+                "hint": "Zaškrtnutí povolí částicové efekty a počasí. Některé efekty mohou být náročné na výkon v závislosti na hardwaru a jejich množství. Pro lepší výkon vypni."
+            },
+            "softShadows": {
+                "name": "Měkké stíny?",
+                "hint": "Zaškrtnutí povolí měkké stíny, má to mírný dopad na výkon. Vyžaduje znovunačtení."
+            },
+            "resolution": {
+                "name": "Rozlišení",
+                "hint": "Rozlišení 3D plátna, ovlivňuje výkon.",
+                "options": {
+                    "full": "Vysoké",
+                    "half": "Střední",
+                    "quarter": "Nízké"
+                }
+            },
+            "cameralockzero": {
+                "name": "Bránit záporné poloze kamery?",
+                "hint": "Zaškrtnutí zabrání kameře otáčet se či posouvat pod úroveň nula (vyžaduje znovunačtení)."
+            },
+            "debugMode": {
+                "name": "Zapnout režim ladění?",
+                "hint": "Zaškrtnutí zbrazí užitečné informace pro řešení problémů."
+            }
+        },
+        "exporter": {
+            "title": "Exportovat objekty jako GLTF",
+            "tokens": "Tokeny",
+            "interactive": "Zahrnout přetahovatelné tokeny",
+            "tiles": "Dlaždice",
+            "all": "Celá scéna",
+            "doors": "Dveře",
+            "walls": "Zdi",
+            "background": "Pozadí",
+            "export": "Exportovat",
+            "cancel": "Zrušit"
+        },
+        "particleSystems": {
+            "optgroup-projectiles": "Projektily",
+            "optgroup-rays": "Paprsky",
+            "optgroup-sprites": "Objekty",
+            "optgroup-directional": "Směrové",
+            "optgroup-explosions": "Výbuchy",
+            "optgroup-targetonly": "Na cíli",
+            "custom": "Vlastní",
+            "torch": "Pochodeň",
+            "magiccircle": "Magický kruh",
+            "fire": "Oheň",
+            "vortex": "Vír",
+            "sparks": "Jiskry",
+            "holy": "Svaté světlo",
+            "ghostly": "Přízračné světlo",
+            "fairy": "Vílí prach",
+            "smokecloud": "Kouřový mrak",
+            "mysteriouslights": "Tajemná světla",
+            "sunburst": "Sluneční záblesk",
+            "tesla": "Teslův výboj",
+            "magicsphere": "Magická sféra",
+            "mist": "Mlha",
+            "mist2": "Mlha 2",
+            "gravitywell": "Gravitační studna",
+            "optgroup": "Směrové (vyžaduje úhel emise)",
+            "directionalfire": "Plamenomet",
+            "directionalshock": "Elektrický výboj",
+            "directionalpoison": "Jedovatý mrak",
+            "directionalwave": "Vlna",
+            "directionallaser": "Laser",
+            "directionalfrost": "Mráz",
+            "projectile": "Projektil",
+            "blackdart": "Černá střela",
+            "shotgun": "Broky",
+            "earthprojectile": "Zemní projektil",
+            "earthexplosion": "Zemní výbuch",
+            "ray": "Paprsek",
+            "voidray": "Paprsek prázdnoty",
+            "runicray": "Runový paprsek",
+            "runicshot": "Runový výstřel",
+            "explosion": "Výbuch",
+            "sprite": "2D model",
+            "slash": "Sečný úder",
+            "magicburst": "Magický výboj",
+            "json": "Vlastní (JSON)",
+            "jb2aexplosion": "Výbuch (JB2A animovaný)",
+            "jb2aexplosionnolight": "Výbuch (JB2A animovaný, bez světla)",
+            "arrow": "Šíp",
+            "bolt": "Šroub",
+            "javelin": "Oštěp",
+            "magicarrow": "Magický šíp",
+            "bullet": "Kul",
+            "swing": "Sek (3D objekt)",
+            "thrust": "Bodnutí (3D objekt)",
+            "thrustswing": "Sek/Bodnutí (3D objekt)",
+            "starburst": "Hvězdný výbuch",
+            "lightning": "Blesk",
+            "castingsign": "Rituál"
+        },
+        "macrodialog": {
+            "title": "Exportovat částicový efekt",
+            "label": "Název:",
+            "export": "Uložit do makra",
+            "cancel": "Zrušit",
+            "placeholder": "Zadej název makra"
+        },
+        "welcome": {
+            "title": "Vítej v 3D Canvas",
+            "content": "<h1>Vítej ve 3D!</h1>\nVítej ve 3D Canvas! Nejprve děkuji za podporu mého vývoje a za to, že jsi tento projekt umožnil/a!\nJednoduše <b>klikni na tlačítko <i class='fas fa-cube'></i></b> (Ovládání tokenů, vlevo nahoře) a přepni scénu do 3D.<p><h2>Důležité moduly</h2>\nNež začneš s 3D Canvas, nainstaluj: <ul><li><a href='https://wiki.theripper93.com/levels-3d-preview/canvas3dcompendium'>Mapmaking Pack</a></li><li><a href='https://wiki.theripper93.com/levels-3d-preview/canvas3dtokencompendium'>Token Collection</a></li></ul> Získáš spoustu 3D rekvizit, tokenů a mnoho nástrojů pro snadnou tvorbu!<p><h2>Začínáme</h2>\n Po aktivaci <b>Mapmaking Pack</b> získáš přístup k rychlému a jednoduchému <b>Tutoriálu pro rychlý start</b>. Po jeho dokončení je velmi doporučeno <b>přečíst dokumentaci</b> (kliknutím na tlačítko <b><i class='fas fa-book'></i> Začínáme</b> níže), pokud se chceš ponořit do pokročilých nastavení. Dokumentaci najdeš kdykoli i ve svých kompendiích! Obsahuje také kolekci video tutoriálů.<p><h2>Řešení problémů</h2>\nPokud narazíš na <b>problém</b>, nebo máš potíže s <b>nastavením</b> či <b>3D modely</b>, neváhej se <b>ozvat</b> na Discord kanálu!<hr>",
+            "ok": "Zavřít",
+            "dontshowagain": "Znovu nezobrazovat",
+            "opencompendium": "Začínáme"
+        },
+        "newuserexperience": {
+            "title": "Vítej v 3D Canvas",
+            "content": "<h1>3D Rychlý start!</h1> Vítej ve 3D Canvas, toto je rychlý úvod, který ti pomůže začít s tvorbou map snadno a rychle! Klikni na tlačítko <b>Spustit prohlídku!</b> pro zahájení.<hr>",
+            "starttour": "Spustit prohlídku!"
+        },
+        "performance": {
+            "verylow": "Velmi nízká",
+            "low": "Nízká",
+            "medium": "Střední",
+            "high": "Vysoká",
+            "veryhigh": "Velmi vysoká",
+            "custom": "Volitelná",
+            "dialog": {
+                "title": "3D Canvas: Nastavení výkonu",
+                "content": "Zvol preferovanou kvalitu grafiky (stránka se obnoví):"
+            },
+            "buttonTooltip": {
+                "verylow": "Doporučeno pro starší integrované GPU",
+                "low": "Doporučeno pro starší dedikované GPU či moderní integrované GPU",
+                "medium": "Doporučeno pro moderní dedikované GPU",
+                "high": "Doporučeno pro výkonné dedikovaná GPU",
+                "veryhigh": "Doporučeno pro výkonné dedikovaná GPU"
+            },
+            "settings": {
+                "header": "Grafická nastavení",
+                "presetHint": "Zvol přednastavenou vizuální kvalitu automatického nastavení níže uvedených možností. Jednotlivá nastavení můžeš kdykoli upravit ručně. Pro doporučení hardwaru najeď na tlačítka.",
+                "resolution": "S aktuálním nastavením poběží 3D Canvas v rozlišení {resolution}.",
+                "resolutionTooltip": "Používání 3D Canvas ve vysokém rozlišení může být velmi náročné pro slabší hardware, zejména s rozlišením 2K+. Pokud zaznamenáš problémy s výkonem, zkus rozlišení snížit."
+            },
+            "notification": "3D Canvas: Režim výkonu nastaven na {performancemode}."
+        },
+        "tileEditor": {
+            "controlsReference": {
+                "title": "Ovládání editoru dlaždic 3D Canvas",
+                "translate": "Posun",
+                "rotate": "Otáčení",
+                "scale": "Měřítko",
+                "toggleGizmo": "Přepnout manipulátor",
+                "nogizmo": "S vypnutým manipulátorem se dlaždice při přetažení přichytí k terénu.",
+                "scaleWidth": "Šířka",
+                "scaleHeight": "Výška",
+                "tiltX": "Náklon X",
+                "tiltZ": "Náklon Y",
+                "scaleGap": "Mezera",
+                "scaleScale": "Měřítko dlaždice",
+                "toggleMode": "Režim výplně",
+                "wheel": "Kolečkem myši zvyšuj/snižuj hodnoty",
+                "clone": "Když chcešč klonovat, pak před zahájením transformace podrž CTRL."
+            }
+        },
+        "tokenAnimations": {
+            "title": "Animace",
+            "twirl": "Zatočení",
+            "slash": "Seknutí",
+            "charge": "Výpad",
+            "swipe": "Švih",
+            "buff": "Posílení",
+            "debuff": "Oslabení",
+            "bow": "Úklona",
+            "breath": "Dech",
+            "shake": "Otřes",
+            "knockback": "Odhození"
+        },
+        "baseStyles": {
+            "roundDoubleRing": "Kulatý dvojitý prstenec",
+            "sharp": "Ostrý",
+            "sharpIndicator": "Ostrý + indikátor",
+            "rounded": "Zaoblený",
+            "ringHollow": "Prstenec dutý",
+            "ringSimple": "Prstenec jednoduchý",
+            "ringSimpleSmall": "Prstenec jednoduchý malý",
+            "jb2ahex1": "Šestiúhelník 1 (JB2A)",
+            "jb2ahex1Indicator": "Šestiúhelník 1 + indikátor (JB2A)",
+            "jb2ahex2": "Šestiúhelník 2 (JB2A)",
+            "jb2ahex2Indicator": "Šestiúhelník 2 + indikátor (JB2A)",
+            "jb2around1": "Kruh 1 (JB2A)",
+            "jb2around1Indicator": "Kruh 1 + indikátor (JB2A)",
+            "jb2around2": "Kruh 2 (JB2A)",
+            "jb2around2Indicator": "Kruh 2 + indikátor (JB2A)",
+            "jb2asquare1": "Čtverec 1 (JB2A)",
+            "jb2asquare1Indicator": "Čtverec 1 + indikátor (JB2A)",
+            "jb2asquare2": "Čtverec 2 (JB2A)",
+            "jb2asquare2Indicator": "Čtverec 2 + indikátor (JB2A)"
+        },
+        "units": {
+            "ms": "Milisekundy",
+            "gu": "Jednotky mřížky",
+            "gs": "Pole mřížky"
+        },
+        "shaders": {
+            "config": {
+                "title": "Nastavení shaderů",
+                "save": "Uložit",
+                "autosave": "Automaticky ukládat",
+                "apply": "Použít",
+                "macro-btn": "Makro",
+                "enabled": "Povoleno?",
+                "label": "Shadery",
+                "button": "Nastavit shadery",
+                "notes": "Nastav vizuální efekty použité na tomto 3D objektu.",
+                "slow": "VAROVÁNÍ: Použití mnoha instancí tohoto shaderu může způsobit problémy s výkonem.",
+                "macro": {
+                    "title": "Vytvořit makro shaderu",
+                    "content": "Název makra:",
+                    "created": "Makro '%s' bylo úspěšně vytvořeno!",
+                    "enabled": "Exportovat pouze povolené",
+                    "players": "Povolit hráčům"
+                }
+            },
+            "clipping": {
+                "name": "Ořezávání",
+                "description": "Nechá tuto dlaždici plynule mizet v blízkosti tokenu či kamery.",
+                "speed": "Rychlost",
+                "diameter": "Poloměr",
+                "heightOffset": "Posun výšky",
+                "noiseScale": "Měřítko šumu",
+                "useCamera": "Použít kameru",
+                "useCameraAdvanced": "Použít pokročilé výpočty kamery"
+            },
+            "wind": {
+                "name": "Vítr",
+                "description": "Efekt větru pro přidání pohybu vegetaci.",
+                "speed": "Rychlost",
+                "direction": "Směr",
+                "intensity": "Intenzita",
+                "affect_model": "Ukotvení (%)",
+                "convoluted": "Zkroucené",
+                "ground_blend": "Prolnutí se zemí",
+                "ground_color": "Barva země",
+                "reactive": "Reaktivní",
+                "reactive_intensity": "Reaktivní intenzita"
+            },
+            "distortion": {
+                "name": "Zkreslení",
+                "description": "Efekt zkreslení ideální pro lávová jezírka a jiné viskózní kapaliny.",
+                "speed": "Rychlost",
+                "direction": "Směr",
+                "intensity": "Intenzita",
+                "convoluted": "Zkroucené"
+            },
+            "water": {
+                "name": "Voda",
+                "description": "Jednoduchý vodní efekt založený na sinusových vlnách. Účinný a velmi nenáročný na výkon.",
+                "speed": "Rychlost",
+                "direction": "Směr",
+                "wave_amplitude": "Hustota vln",
+                "wave_height": "Výška vln"
+            },
+            "oil": {
+                "name": "Olej",
+                "description": "Efekt oleje/tekutého kovu. Efekt lze tónovat a škálovat, měj na paměti, že barva bude efektem zkreslena.",
+                "speed": "Rychlost",
+                "intensity": "Intenzita",
+                "scale": "Měřítko",
+                "color": "Barva",
+                "blendMode": "Prolínání mixu"
+            },
+            "ocean": {
+                "name": "Oceán",
+                "description": "Složitá simulace vody s více vlnami. Náročnější na výkon než jednoduchý shader vody.",
+                "speed": "Rychlost",
+                "scale": "Měřítko",
+                "waveA_wavelength": "Vlnová délka vlny A",
+                "waveA_steepness": "Strmost vlny A",
+                "waveA_direction": "Směr vlny A",
+                "waveB_wavelength": "Vlnová délka vlny B",
+                "waveB_steepness": "Strmost vlny B",
+                "waveB_direction": "Směr vlny B",
+                "waveC_wavelength": "Vlnová délka vlny C",
+                "waveC_steepness": "Strmost vlny C",
+                "waveC_direction": "Směr vlny C",
+                "foam": "Odlesky",
+                "reflections": "Odrazy"
+            },
+            "orbit": {
+                "name": "Orbit",
+                "description": "Efekt oběžné dráhy. Přidá objektu rotaci a oběh, měj na paměti, že pro nejlepší výsledky by měl být model tvořen jednou sítí.",
+                "orbit_speed": "Rychlost oběhu",
+                "pivot_speed": "Rychlost rotace",
+                "radius": "Poloměr oběhu"
+            },
+            "bounce": {
+                "name": "Poskakování",
+                "description": "Efekt poskakování. Přidá objektu efekt odrazu, pro nejlepší výsledky by měl být model tvořen jednou sítí.",
+                "speed": "Rychlost",
+                "strength": "Intenzita",
+                "axisX": "Osa X",
+                "axisY": "Osa Z",
+                "axisZ": "Osa Y"
+            },
+            "grid": {
+                "name": "Mřížka",
+                "description": "Promítne mřížku scény na tento 3D objekt. Podporovány jsou pouze čtvercové mřížky. Tento shader použije barvu a průhlednost mřížky nastavenou ve scéně.",
+                "normalCulling": "Ořez normál",
+                "heightCulling": "Ořez výšky",
+                "showBounds": "Zobrazit hranice"
+            },
+            "triplanar": {
+                "name": "Triplanární mapování",
+                "description": "Pokročilá technika projekce textury pro správné texturování povrchů, které by jinak měly natažené textury při strmých úhlech.",
+                "roughnessAdjust": "Úprava odrazu"
+            },
+            "textureScroll": {
+                "name": "Posun",
+                "description": "Jednoduchý efekt posouvání textury podobný modulu 'Parallaxia'.",
+                "speedX": "Rychlost X",
+                "speedY": "Rychlost Y",
+                "direction": "Směr"
+            },
+            "fire": {
+                "name": "Oheň",
+                "description": "Efekt ohně. Lze jej obarvit a škálovat pro výsledky daleko přesahující běžný oheň.",
+                "speed": "Rychlost",
+                "intensity": "Intenzita",
+                "scale": "Měřítko",
+                "color": "Barva",
+                "blendMode": "Prolínání mixu"
+            },
+            "lightning": {
+                "name": "Blesk",
+                "description": "Efekt blesku s pohybujícími se elektrickými oblouky.",
+                "speed": "Rychlost",
+                "intensity": "Intenzita",
+                "scale": "Měřítko",
+                "color": "Barva",
+                "blendMode": "Prolínání mixu"
+            },
+            "ice": {
+                "name": "Led",
+                "description": "Efekt zmrzlého povrchu s velmi jemnou animací.",
+                "speed": "Rychlost",
+                "grain": "Zrnitost",
+                "intensity": "Intenzita",
+                "scale": "Měřítko",
+                "color": "Barva",
+                "blendMode": "Prolínání mixu"
+            },
+            "idle": {
+                "name": "Klidová animace",
+                "description": "Jednoduchý efekt deformace tokenů, aby působily živěji.",
+                "speed": "Rychlost",
+                "direction": "Směr",
+                "intensity": "Intenzita",
+                "affect_model": "Ukotvení (%)"
+            },
+            "colorwarp": {
+                "name": "Barva",
+                "description": "Efekty barevného zkreslení, lze nastavit více najednou. Záření funguje nejlépe s povoleným efektem 'Záře' v nastavení scény.",
+                "speed": "Rychlost",
+                "glow": "Záření",
+                "hue_angle": "Posun odstínu",
+                "flicker": "Blikání",
+                "animate_range": "Rozsah animace"
+            },
+            "colorswap": {
+                "name": "Záměna barev",
+                "description": "Efekt výměny barev. Nahradí barvu modelu jinou barvou.",
+                "sourceColor1": "Zdrojová barva 1",
+                "targetColor1": "Cílová barva 1",
+                "threshold1": "Práh 1",
+                "sourceColor2": "Zdrojová barva 2",
+                "targetColor2": "Cílová barva 2",
+                "threshold2": "Práh 2",
+                "sourceColor3": "Zdrojová barva 3",
+                "targetColor3": "Cílová barva 3",
+                "threshold3": "Práh 3"
+            },
+            "textureRotate": {
+                "name": "Rotace",
+                "description": "Efekt rotace textury, vyžaduje texturu a její opakování.",
+                "speed": "Rychlost",
+                "centerx": "Kotva X",
+                "centery": "Kotva Y",
+                "offsetAngle": "Posun úhlu"
+            },
+            "mask": {
+                "name": "Maska",
+                "description": "Efekt masky. Maskuje texturu pomocí maskovací textury. Vyžaduje texturu a maskovací texturu.",
+                "textureMask": "Maskovací textura",
+                "textureDiffuse": "Textura",
+                "repeat": "Opakování",
+                "color": "Barva"
+            },
+            "noiseMask": {
+                "name": "Šum",
+                "description": "Efekt masky šumu. Maskuje texturu pomocí dvou šumových textur. Vyžaduje texturu a obě šumové textury.",
+                "textureNoise1": "Šumová textura 1",
+                "noise1Repeat": "Opakování",
+                "noise1ScrollX": "Posun X",
+                "noise1ScrollY": "Posun Y",
+                "textureNoise2": "Šumová textura 2",
+                "noise2Repeat": "Opakování",
+                "noise2ScrollX": "Posun X",
+                "noise2ScrollY": "Posun Y",
+                "invert": "Invertovat",
+                "textureDiffuse": "Textura",
+                "color": "Barva",
+                "repeat": "Opakování",
+                "strength": "Síla",
+                "maskThreshold": "Práh masky"
+            },
+            "overlay": {
+                "name": "Překrytí",
+                "description": "Překrytí textury. Vyžaduje nastavenou texturu. Pro textury s bílým pozadím použij 'Násobící prolínání', pro textury s černým pozadím 'Černé prolínání'.",
+                "textureDiffuse": "Textura",
+                "coveragePercent": "Pokrytí (%)",
+                "inclination": "Sklon",
+                "color": "Barva",
+                "strength": "Síla",
+                "repeat": "Opakování",
+                "rotation_angle": "Rotace (°)",
+                "offsetX": "Posun X (UV)",
+                "offsetY": "Posun Y (UV)",
+                "black_alpha": "Černé prolínání",
+                "add_blend": "Součtové prolínání",
+                "mult_blend": "Násobící prolínání"
+            },
+            "splatMap": {
+                "name": "Maska textur",
+                "description": "Maska textur. Vyžaduje nastavenou texturu. Je to pokročilý shader. Mapuje RGBA kanály textury masky textur na 4 různé textury.",
+                "textureSplatMap": "Maska textur",
+                "repeatSplatMap": "Opakování masky textur",
+                "flipY": "Překlopit Y",
+                "useAlpha": "Použít alfa kanál",
+                "upNormals": "Pouze povrchy 'nahoru'",
+                "textureDiffuse0": "Textura R",
+                "color0": "Barva R",
+                "repeat0": "Opakování R",
+                "textureDiffuse1": "Textura G",
+                "color1": "Barva G",
+                "repeat1": "Opakování G",
+                "textureDiffuse2": "Textura B",
+                "color2": "Barva B",
+                "repeat2": "Opakování B",
+                "textureDiffuse3": "Textura A",
+                "color3": "Barva A",
+                "repeat3": "Opakování A"
+            },
+            "textureGradient": {
+                "name": "Barevý přechod",
+                "description": "Barevý přechod textury. Vyžaduje nastavenou texturu. Mapuje texturu podle výšky či sklonu.\nPři použití sklonu platí: 1 odpovídá rovnému povrchu, 0 svislému povrchu.",
+                "texCount": "Počet textur",
+                "useNormals": "Použít sklon",
+                "smoothing": "Vyhlazení",
+                "tex0Begin": "Začátek textury 1",
+                "tex1Begin": "Začátek textury 2",
+                "tex2Begin": "Začátek textury 3",
+                "tex3Begin": "Začátek textury 4",
+                "textureDiffuse0": "Textura 1",
+                "color0": "Barva 1",
+                "repeat0": "Opakování 1",
+                "textureDiffuse1": "Textura 2",
+                "color1": "Barva 2",
+                "repeat1": "Opakování 2",
+                "textureDiffuse2": "Textura 3",
+                "color2": "Barva 3",
+                "repeat2": "Opakování 3",
+                "textureDiffuse3": "Textura 4",
+                "color3": "Barva 4",
+                "repeat3": "Opakování 4"
+            },
+            "sound": {
+                "name": "Zvuk",
+                "description": "Vyžaduje přehrávaný zvuk. Kvůli výkonu se při více zvucích použije pouze první přehrávaný.",
+                "intensity": "Intenzita",
+                "glow": "Záře",
+                "chroma": "Sytost",
+                "flat_bottom": "Plochý spodek",
+                "croma_offset_angle": "Posun sytosti"
+            }
+        },
+        "tours": {
+            "dialog": {
+                "title": "Začínáme",
+                "content": "Chceš spustit prohlídku 'Začínáme' s 3D Canvas?"
+            },
+            "getting-started": {
+                "title": "Základní: Začínáme",
+                "description": "Tato prohlídka tě provede úplnými základy 3D Canvas.",
+                "requires": "Pro spuštění této prohlídky NESMÍ být aktivní 3D režim.",
+                "step-0": {
+                    "title": "Přechod do 3D režimu (1/2)",
+                    "content": "Klikni na Ovládání tokenů."
+                },
+                "step-1": {
+                    "title": "Přechod do 3D režimu (2/2)",
+                    "content": "Pro aktivaci 3D režimu klikni na tlačítko kostky."
+                },
+                "step-2": {
+                    "title": "Ovládání",
+                    "content": "Načítací obrazovka obsahuje užitečné informace o ovládání kamery a tokenů v 3D Canvas."
+                }
+            },
+            "first-tile": {
+                "title": "Pokročilejší: Manipulace 3D dlaždicemi a vlastní zdroje",
+                "description": "Tato prohlídka tě uvede do manipulace s 3D dlaždicemi a používání vlastních zdrojů.",
+                "requires": "Pro spuštění této prohlídky musíš mít aktivní 3D režim a nainstalovaný 3D Canvas Mapmaking Pack.",
+                "step-0": {
+                    "title": "Vrstva dlaždic",
+                    "content": "Klikni na Ovládání dlaždic."
+                },
+                "step-1": {
+                    "title": "Prohlížeč souborů",
+                    "content": "Otevři prohlížeč souborů."
+                },
+                "step-2": {
+                    "title": "Přejdi do 3D zdrojů",
+                    "content": "Postupuj podle kroků, aby ses dostal/a do složky dlaždic 3D Canvas Mapmaking Pack."
+                },
+                "step-3": {
+                    "title": "Přejdi do 3D zdrojů",
+                    "content": "Postupuj podle kroků, aby ses dostal/a do složky dlaždic 3D Canvas Mapmaking Pack."
+                },
+                "step-4": {
+                    "title": "Přejdi do 3D zdrojů",
+                    "content": "Postupuj podle kroků, aby ses dostal/a do složky dlaždic 3D Canvas Mapmaking Pack."
+                },
+                "step-5": {
+                    "title": "Přejdi do 3D zdrojů",
+                    "content": "Postupuj podle kroků, aby ses dostal/a do složky dlaždic 3D Canvas Mapmaking Pack."
+                },
+                "step-6": {
+                    "title": "Přejdi do 3D zdrojů",
+                    "content": "Postupuj podle kroků, aby ses dostal/a do složky dlaždic 3D Canvas Mapmaking Pack."
+                },
+                "step-7": {
+                    "title": "Přetáhni a pusť",
+                    "content": "Přetáhni 3D model stejně jako 2D dlaždici. Použij přehled ovládání pro úpravu dlaždice podle potřeby. Kompendium maker 3D Canvas obsahuje pro manipulaci s dlaždicemi užitečná makra."
+                }
+            },
+            "scene-configuration": {
+                "title": "Pokročilé: Nastavení 3D scény",
+                "description": "Tato prohlídka tě provede možnostmi nastavení scény.",
+                "requires": "Pro zobrazení této prohlídky musíš mít aktivní 3D režim.",
+                "step-0": {
+                    "title": "Přejdi do záložky 3D",
+                    "content": "Záložka 3D obsahuje všechna nastavení 3D scény."
+                },
+                "step-1": {
+                    "title": "Smí hráči zapínat 3D?",
+                    "content": "Pokud toto nastavení nemáš zapnuté, tvoji hráči nebudou moci vstoupit do 3D režimu."
+                },
+                "step-2": {
+                    "title": "3D režim při načtení?",
+                    "content": "Pokud je toto nastavení zapnuté, scéna se po aktivaci automaticky načte ve 3D režimu."
+                },
+                "step-3": {
+                    "title": "Výhled",
+                    "content": "Ve výchozím stavu 3D Canvas zrcadlí viditelnost 2D režimu a používá jeho zdi (nezávisle na jejich viditelnosti) pro výpočet výhledu tokenů. Chceš-li ignorovat 2D výhled a použít 3D prostředí pro výpočet dohledu, pak to zapni."
+                },
+                "step-4": {
+                    "title": "Válečná mlha",
+                    "content": "Válečná mlha je ve 3D režimu ve výchozím stavu vypnutá, i když je ve 2D zapnutá. Když je v 3D válečná mlha vypnutá, hráči uvidí celé prostředí, ale tokeny budou stále skrývány podle vidění. Pokud chceš mlhu války používat, důrazně se doporučuje mít v nastavení modulu 3D Canvas zapnuto 'Sdílet kontext'."
+                },
+                "step-5": {
+                    "title": "Prostředí",
+                    "content": "HDRI (obrázek 2:1) přispívá k osvětlení scény a pozadí (představ si to jako globální iluminaci). Změna HDRI může výrazně změnit vzhled scény! Zkus nastavit HDRI na některou z možností obsažených v 3D Canvas Mapmaking Pack!"
+                },
+                "step-6": {
+                    "title": "Osvětlení",
+                    "content": "Tato část ti umožní upravit globální osvětlení scény. Zkus si pohrát se základními posuvníky!"
+                },
+                "step-7": {
+                    "title": "Počasí",
+                    "content": "Zde můžeš pro scénu nastavit efekt počasí/částic. Zkus nějaký zapnout a uvidíš, jak může scénu vylepšit!"
+                },
+                "step-8": {
+                    "title": "Pokročilé",
+                    "content": "Nastavení scény nabízí mnoho dalších možností. Jakmile se seznámíš se základními nastaveními, můžeš kliknout sem a zobrazit všechny pokročilé možnosti."
+                }
+            },
+            "first-scene": {
+                "title": "Základní: Vytvoření první 3D scény",
+                "description": "Tato prohlídka ti pomůže začít s tvorbou 3D scén.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack.",
+                "step-0": {
+                    "title": "Klikni na tlačítko Scény",
+                    "content": "Scény obsahují všechny scény ve tvém světě."
+                },
+                "step-1": {
+                    "title": "Vytvoř novou scénu",
+                    "content": "Klikni na tlačítko 'Vytvořit scénu' pro vytvoření nové scény."
+                },
+                "step-2": {
+                    "title": "Povol rychlé vytvoření 3D scény",
+                    "content": "Pro povolení rychlého vytvoření 3D scény zaškrtni toto políčko."
+                },
+                "step-3": {
+                    "title": "Vytvoř scénu",
+                    "content": "Pro potvrzení vytvoření scény klikni na tlačítko 'Vytvořit Scéna'."
+                },
+                "step-4": {
+                    "title": "Ovládání",
+                    "content": "Načítací obrazovka obsahuje užitečné informace o ovládání kamery a tokenů v 3D Canvas."
+                },
+                "step-5": {
+                    "title": "Panel 3D scény",
+                    "content": "Tento panel ti umožní rychle postavit scénu. Po dokončení prohlídky najeď na tlačítka a uvidíš, co dělají!"
+                },
+                "step-6": {
+                    "title": "Přehled ovládání",
+                    "content": "Kliknutím na toto tlačítko můžeš kdykoli znovu zobrazit přehled ovládání."
+                },
+                "step-7": {
+                    "title": "Manipulace s dlaždicemi",
+                    "content": "Po umístění dlaždice ji můžeš posouvat, škálovat a otáčet. Pro zobrazení přehledu ovládání jako zprávy v chatu klikni na toto tlačítko."
+                },
+                "step-8": {
+                    "title": "Začni stavět!",
+                    "content": "Tohle je vše, co do začátku potřebuješ! Zkus vytvořit scénu pomocí 'Rychlý terén' a panelu 3D scény. Jakmile budeš v 3D Canvas jistější, můžeš přejít na stránku Prohlídky a spustit pokročilejší prohlídky!"
+                }
+            },
+            "tile-configuration": {
+                "title": "Pokročilé: Nastavení dlaždice",
+                "description": "Tato prohlídka tě provede možnostmi nastavení dlaždice a shadery.",
+                "requires": "Pro spuštění této prohlídky musíš mít vybranou dlaždici.",
+                "step-0": {
+                    "title": "Přejdi do záložky 3D",
+                    "content": "Záložka 3D obsahuje všechna nastavení 3D dlaždice."
+                },
+                "step-1": {
+                    "title": "3D model",
+                    "content": "Toto nastavení ti umožní nastavit 3D model dlaždice. Stejně jako u 2D obrázků můžeš procházet a nahrávat 3D soubory."
+                },
+                "step-2": {
+                    "title": "Dynamická síť",
+                    "content": "Možnost 'Dynamická síť' je velmi silný nástroj – umožňuje generovat jednoduché 3D tvary a další objekty."
+                },
+                "step-3": {
+                    "title": "Textura",
+                    "content": "Toto nastavení ti umožní nastavit texturu dlaždice. Kromě běžného prohlížení souborů ve Foundry můžeš pro přístup k mnoha zahrnutým texturám použít i tlačítko 'Otevřít prohlížeč materiálů'."
+                },
+                "step-4": {
+                    "title": "Vidění",
+                    "content": "Toto nastavení ti umožní určit, jak bude dlaždice interagovat s viděním. V 3D nejsou potřeba zdi – jejich funkci plní samotné dlaždice!"
+                },
+                "step-5": {
+                    "title": "Shadery",
+                    "content": "Tato část umožňuje aplikovat na dlaždici shadery. Shadery jsou silný nástroj pro vytváření různých efektů. Zkus na dlaždici aplikovat některý ze shaderů a zjisti, jak fungují!"
+                },
+                "step-6": {
+                    "title": "Okno shaderu",
+                    "content": "Toto okno ti umožní upravovat parametry shaderu. Přepínej mezi kartami, zapínej různé efekty a vyzkoušej je!"
+                }
+            },
+            "tokens": {
+                "title": "Základní: 3D tokeny",
+                "description": "Tato prohlídka tě provede nastavením tokenu pro použití ve 3D.",
+                "requires": "Pro spuštění této prohlídky musíš mít vybraný token, nainstalovaný 3D Canvas Mapmaking Pack a 3D Canvas Token Collection.",
+                "step-0": {
+                    "title": "Přejdi do záložky 3D",
+                    "content": "Záložka 3D obsahuje všechna nastavení 3D tokenu."
+                },
+                "step-1": {
+                    "title": "3D model",
+                    "content": "Toto nastavení ti umožní nastavit 3D model tokenu. Stejně jako u 2D obrázků můžeš procházet a nahrávat 3D soubory."
+                },
+                "step-2": {
+                    "title": "Materiál",
+                    "content": "Toto nastavení ti umožní nastavit materiál tokenu. Můžeš si vybrat z předvoleb či použít vlastní materiál."
+                },
+                "step-3": {
+                    "title": "Barva",
+                    "content": "Pokud používáš přednastavený materiál či neobarvený token, pak ti toto nastavení umožní nastavit barvu tokenu."
+                },
+                "step-4": {
+                    "title": "Prohlížeč tokenů",
+                    "content": "Toto tlačítko otevře prohlížeč tokenů."
+                },
+                "step-5": {
+                    "title": "Prohlížeč tokenů",
+                    "content": "Toto okno ti umožní procházet zahrnuté tokeny. Ve výchozím nastavení jsou zobrazeny pouze obarvené tokeny; všechny tokeny zobrazíš zapnutím příslušného nastavení v modulu 3D Canvas Mapmaking Pack."
+                }
+            },
+            "asset-browser": {
+                "title": "Panel: Prohlížeč zdrojů",
+                "description": "Tato prohlídka tě provede pokročilými funkcemi Prohlížeče zdrojů.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený Prohlížeč zdrojů.",
+                "step-0": {
+                    "title": "Okno prohlížeče zdrojů",
+                    "content": "Toto okno ti umožní procházet zahrnuté zdroje."
+                },
+                "step-1": {
+                    "title": "Vyhledávací pole",
+                    "content": "Pomocí vyhledávacího pole můžeš najít konkrétní zdroje. Pro nalezení zdrojů odpovídajících určitému tématu můžeš použít i klíčová slova jako 'nature' nebo 'scifi'."
+                },
+                "step-2": {
+                    "title": "Panel zdrojů",
+                    "content": "Tento panel obsahuje všechny zdroje odpovídající tvému vyhledávání. Můžeš je přetáhnout do scény, nebo na ně kliknout (případně Ctrl/Shift+klik pro vícenásobný výběr) a vybrat je."
+                },
+                "step-3": {
+                    "title": "Náhodnost",
+                    "content": "Pomocí těchto přepínačů můžeš náhodně měnit umístění zdrojů – rotaci, měřítko a zabarvení."
+                },
+                "step-4": {
+                    "title": "Umístění",
+                    "content": "Tyto přepínače určují způsob umístění zdrojů, například zda mají být zarovnány na mřížku."
+                },
+                "step-5": {
+                    "title": "Kolize",
+                    "content": "Tyto přepínače ti umožní určit, zda mají umístěné zdroje blokovat výhled a/nebo pohyb."
+                },
+                "step-6": {
+                    "title": "Rozmísťování",
+                    "content": "Toto tlačítko zapne rozmísťování zdrojů. Pokud je aktivní, můžeš kliknutím a tažením po scéně umisťovat více zdrojů najednou."
+                },
+                "step-7": {
+                    "title": "Vzhled",
+                    "content": "Tato pole určují základní vzhled zdrojů, například měřítko, rotaci a zabarvení."
+                },
+                "step-8": {
+                    "title": "Nástroje",
+                    "content": "Záložka 'Nástroje' obsahuje rychlé zkratky pro hromadné akce."
+                },
+                "step-9": {
+                    "title": "Optimalizace",
+                    "content": "Po dokončení stavby scény použij tlačítko 'Sloučit dlaždice' pro sloučení podobných dlaždic do jedné a zlepšení výkonu."
+                }
+            },
+            "quick-environment": {
+                "title": "Panely: Prostředí",
+                "description": "Tato prohlídka tě provede panelem Prostředí.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený panel Prostředí.",
+                "step-0": {
+                    "title": "Panel Prostředí",
+                    "content": "Tento panel ti umožní několika kliknutími rychle nastavit atmosféru scény."
+                },
+                "step-1": {
+                    "title": "Denní doba",
+                    "content": "Nastav denní dobu ve 24hodinovém formátu. Ovlivní to osvětlení a stíny; pro pokročilejší nastavení přejdi do nastavení scény."
+                },
+                "step-2": {
+                    "title": "Počasí",
+                    "content": "Počasí můžeš nastavit pomocí předvoleb, nebo přejít do nastavení scény pro více a vlastní efekty."
+                },
+                "step-3": {
+                    "title": "Mapa oblohy",
+                    "content": "Mapa oblohy ovlivňuje nejen pozadí scény, ale i její osvětlení. Vyzkoušej, jak různé mapy oblohy dokážou výrazně změnit ladění scény."
+                }
+            },
+            "quick-terrain": {
+                "title": "Panely: Terén",
+                "description": "Tato prohlídka tě provede panelem Terén.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený panel Terén.",
+                "step-0": {
+                    "title": "Panel Terén",
+                    "content": "Tento panel ti umožní rychle vytvořit terén coby základ tvé scény."
+                },
+                "step-1": {
+                    "title": "Téma",
+                    "content": "V této části si můžeš vybrat z přednastavených témat terénu. Tlačítkem 'Použít téma' aplikuješ vybrané téma na aktuální terén."
+                },
+                "step-2": {
+                    "title": "Terén",
+                    "content": "Tato část ti umožní náhodně vygenerovat terén. V rozbalovacím menu si vyber typ terénu. Tlačítko 'Jemné doladění' umožní ručně posunout a změnit měřítko výškové mapy použité pro terén."
+                },
+                "step-3": {
+                    "title": "Tekutiny",
+                    "content": "Kliknutím na tlačítka tekutin vytvoříš dlaždici s tekutinou. V závislosti na terénu může být nutné tekutinu upravit měřítkem či polohou – v případě potřeby použij nástroje manipulátoru."
+                },
+                "step-4": {
+                    "title": "Nástroje",
+                    "content": "Tato část obsahuje nástroje pro práci s terénem. Pomocí tlačítka 'Zamknout/Odemknout' zabráníš výběru terénu levým kliknutím, nebo tlačítkem 'Mřížka' přepneš zobrazení mřížky na terénu."
+                }
+            },
+            "material-browser": {
+                "title": "Panely: Materiály",
+                "description": "Tato prohlídka tě provede panelem Materiály.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený panel Materiály.",
+                "step-0": {
+                    "title": "Panel Materiály",
+                    "content": "Tento panel ti umožní rychle procházet a měnit materiály na vybraných dlaždicích."
+                },
+                "step-1": {
+                    "title": "Vyhledávací pole",
+                    "content": "Pomocí vyhledávacího pole můžeš najít konkrétní materiály."
+                },
+                "step-2": {
+                    "title": "Opakování textury",
+                    "content": "Toto pole umožňuje změnit opakování textury u vybraných dlaždic. Ovlivňuje to způsob dlaždicování textury."
+                },
+                "step-3": {
+                    "title": "Seznam materiálů",
+                    "content": "Tento seznam obsahuje všechny materiály odpovídající tvému vyhledávání. Kliknutím na materiál jej aplikuješ na všechny vybrané dlaždice."
+                }
+            },
+            "effect-browser": {
+                "title": "Panely: Efekty",
+                "description": "Tato prohlídka tě provede panelem Efekty.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený panel Efekty.",
+                "step-0": {
+                    "title": "Panel Efekty",
+                    "content": "Tento panel umožňuje přetahovat efekty do scény.<hr>Efekty jsou textury promítané jako nálepky. Po umístění uvidíš červený kužel označující směr projekce. Ten je viditelný pouze pro GM ve vrstvě dlaždic."
+                },
+                "step-1": {
+                    "title": "Měřítko",
+                    "content": "Toto pole umožňuje změnit měřítko vybraných efektů."
+                },
+                "step-2": {
+                    "title": "Vyhledávací pole",
+                    "content": "Pomocí vyhledávacího pole můžeš najít konkrétní efekty."
+                },
+                "step-3": {
+                    "title": "Seznam efektů",
+                    "content": "Tento seznam obsahuje všechny efekty odpovídající tvému vyhledávání. Přetáhni efekt do scény pro jeho umístění.<hr>Pokud máš modul <strong>Token Attacher</strong>, přetažením efektu na token jej k tokenu připojíš."
+                }
+            },
+            "cutscene-panel": {
+                "title": "Panely: Filmové scény",
+                "description": "Tato prohlídka tě provede panelem Filmové scény.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený panel Filmové scény.",
+                "step-0": {
+                    "title": "Panel Filmové scény",
+                    "content": "Tento panel ti umožní rychle nastavit jednu či více filmových sekvencí pro tvou scénu."
+                },
+                "step-1": {
+                    "title": "Vytvoření klipu",
+                    "content": "Pro vytvoření nového klipu klikni na tlačítko <strong>Přidat klip</strong>. Tím se vytvoří nový klip a otevře jeho nastavení."
+                },
+                "step-2": {
+                    "title": "Nastavení klipu",
+                    "content": "Tato část umožňuje upravit nastavení aktuálního klipu. Můžeš změnit název, klip přehrát či odstranit."
+                },
+                "step-3": {
+                    "title": "Přidávání klíčových snímků",
+                    "content": "Pro přidání klíčového snímku klikni na tlačítko <strong>Přidat klíčový snímek</strong>. Tím se vytvoří nový klíčový snímek.<hr>Klíčový snímek je bod v čase, kdy je kamera umístěna a natočena do určité pozice. Můžeš jich přidat libovolné množství a vytvořit tak filmovou sekvenci."
+                },
+                "step-4": {
+                    "title": "Zachycení klíčového snímku",
+                    "content": "Pro uložení aktuální pozice a rotace kamery klikni na tlačítko <strong>Zachytit</strong>. Tím se tyto hodnoty uloží ke klíčovému snímku."
+                },
+                "step-5": {
+                    "title": "Délka trvání",
+                    "content": "Toto pole umožňuje změnit délku aktuálního klíčového snímku. Ovlivňuje, jak dlouho bude kamera přecházet z předchozího snímku na tento.<hr>Pokud je pole <strong>Přechod</strong> nastaveno na <strong>Prolínání</strong>, délka určuje dobu ztmavení a znovuobjevení obrazu."
+                },
+                "step-6": {
+                    "title": "Zastavit na",
+                    "content": "Toto pole umožňuje nastavit dobu, po kterou kamera zůstane na aktuálním klíčovém snímku, než přejde na další."
+                },
+                "step-7": {
+                    "title": "Přechod",
+                    "content": "Toto pole umožňuje změnit typ přechodu. Můžeš zvolit <strong>Řetězení</strong> nebo <strong>Prolínání</strong>. Řetězení přesune kameru plynule mezi snímky, Prolínání způsobí ztmavení a znovuobjevení obrazu mezi snímky."
+                },
+                "step-8": {
+                    "title": "Vyhlazení pohybu",
+                    "content": "Toto pole umožňuje změnit typ vyhlazení pohybu. Více informací o funkcích vyhlazení pohybu najdeš <a href='https://easings.net/en'>zde</a>."
+                },
+                "step-9": {
+                    "title": "Upravit",
+                    "content": "Toto tlačítko umožňuje přepnout zobrazení nastavení klíčových snímků pro daný klip."
+                },
+                "step-10": {
+                    "title": "Přehrát",
+                    "content": "Po dokončení filmové scény ji můžeš přehrát kliknutím na tlačítko <strong>Přehrát</strong>. Budeš vyzván/a k výběru hráčů, kteří filmovou scénu uvidí."
+                }
+            },
+            "room-builder": {
+                "title": "Panely: Kobky a interiéry",
+                "description": "Tato prohlídka tě provede panelem Kobky a interiéry.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený panel Kobky a interiéry.",
+                "step-0": {
+                    "title": "Panel Kobky a interiéry",
+                    "content": "Tento panel ti umožní vytvářet kobky, jeskyně a interiéry budov."
+                },
+                "step-1": {
+                    "title": "Stavba",
+                    "content": "Tato část obsahuje všechny nástroje potřebné pro vytvoření rozvržení."
+                },
+                "step-2": {
+                    "title": "Přidat",
+                    "content": "V tomto režimu budou tvary nakreslené na scéně přidány k rozvržení."
+                },
+                "step-3": {
+                    "title": "Odečíst",
+                    "content": "V tomto režimu budou tvary nakreslené na scéně z rozvržení odečteny."
+                },
+                "step-4": {
+                    "title": "Nůž",
+                    "content": "V tomto režimu můžeš vyřezávat části zdí a vytvářet tak průchody."
+                },
+                "step-5": {
+                    "title": "Tvary",
+                    "content": "Tato část určuje režim kreslení<h3>Obdélník a elipsa</h3><p>V tomto režimu klikni a táhni na scéně pro nakreslení tvaru, uvolni tlačítko, až budeš spokojen/a.</p><h3>Mnohoúhelník a křivka</h3><p>V tomto režimu klikni a táhni pro zahájení mnohoúhelníku. Při držení levého tlačítka myši klikni pravým tlačítkem pro přidání bodu. Uvolni levé tlačítko po dokončení; pokud tvar neuzavřeš, vytvoří se pouze zeď.</p>"
+                },
+                "step-6": {
+                    "title": "Typ zdi",
+                    "content": "Toto pole umožňuje změnit typ zdi. <strong>Hladká</strong> vytvoří zdi podobné interiéru, <strong>Hrubá</strong> vytvoří jeskynní stěny."
+                },
+                "step-7": {
+                    "title": "Zdi a podlahy",
+                    "content": "Tato část umožňuje zvolit, zda chceš kreslit zdi, podlahy, nebo obojí."
+                },
+                "step-8": {
+                    "title": "Téma",
+                    "content": "Tato část umožňuje zvolit téma kobky. Vlastní téma vybereš zvolením <strong>Vlastní</strong> v rozbalovacím menu a následným nastavením textur pro zdi a podlahy."
+                },
+                "step-9": {
+                    "title": "Rozměry",
+                    "content": "Tato část umožňuje změnit výšku a tloušťku zdí (v pixelech)."
+                },
+                "step-10": {
+                    "title": "Začněme!",
+                    "content": "Teď, když víš, jak panel používat, pusť se do stavby! Důrazně se doporučuje stavět na rovném povrchu."
+                }
+            },
+            "asset-browser-paint": {
+                "title": "Panel: Prohlížeč zdrojů: Rozmísťování",
+                "description": "Tato prohlídka tě provede rozmísťováním v Prohlížeči zdrojů.",
+                "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený Prohlížeč zdrojů.",
+                "step-0": {
+                    "title": "Režim rozmísťování",
+                    "content": "Režim rozmísťování ti umožní rychle rozmisťovat dlaždice po scéně."
+                },
+                "step-1": {
+                    "title": "Vyber jeden či více zdrojů",
+                    "content": "Pro zahájení rozmísťování musíš v Prohlížeči zdrojů vybrat jeden či více zdrojů. Klikněte na zdroj pro výběr, nebo použij Ctrl+klik pro výběr více zdrojů."
+                },
+                "step-2": {
+                    "title": "Oznámení o výběru",
+                    "content": "Po výběru jednoho či více zdrojů se ve spodní části okna zobrazí oznámení."
+                },
+                "step-3": {
+                    "title": "Rozmísťování: Obdélník",
+                    "content": "Pokud je aktivní nástroj 'Umístit dlaždici', můžeš kliknout a táhnout po scéně a nakreslit obdélník. Ten se vyplní vybranými zdroji."
+                },
+                "step-4": {
+                    "title": "Rozmísťování: Mnohoúhelník",
+                    "content": "Pokud je aktivní nástroj 'Mnohoúhelník', klikni a táhni pro zahájení tvorby mnohoúhelníku. Při držení levého tlačítka myši klikni pravým tlačítkem pro přidání bodu. Po dokončení uvolni levé tlačítko; pokud tvar neuzavřeš, zdroje se rozptýlí podél segmentu, jinak vyplní plochu."
+                },
+                "step-5": {
+                    "title": "Rozmísťování: Volnou rukou",
+                    "content": "Pokud je aktivní nástroj 'Výběr', podrž Shift a poté klikni a táhni pro umisťování zdrojů po scéně."
+                }
+            }
+        },
+        "mergeTiles": {
+            "title": "Sloučení dlaždic",
+            "occlusionGroup": " - ID skrytí: ",
+            "content": "Sloučení dlaždic je nevratná akce, doporučuje se před sloučením většího množství dlaždic vytvořit zálohu scény.<br>Chystáš se sloučit <strong>%count% dlaždic</strong>. Vybrané dlaždice budou vynechány. Opravdu chceš pokračovat?"
+        },
+        "extrudeWalls": {
+            "title": "Vytáhnout zdi",
+            "content": "Tento proces se pokusí převést zdi ve scéně na dlaždice. Opravdu chceš pokračovat?"
+        },
+        "dynamicSkyConfig": {
+            "title": "Nastavení dynamické oblohy",
+            "sceneConfig": {
+                "label": "Dynamická obloha",
+                "button": "Otevřít nastavení",
+                "notes": "Dynamická obloha zajišťuje realističtější a pohyblivý vzhled oblohy, ale skutečné barvy a odrazy ve scéně stále vycházejí ze statického obrázku v sekci \"Obloha\" výše."
+            },
+            "enabled": {
+                "label": "Povolit?"
+            },
+            "turbidity": {
+                "label": "Zákal",
+                "notes": "Zákal je míra množství částic ve vzduchu. Vysoký zákal povede k většímu oparu na obloze."
+            },
+            "rayleigh": {
+                "label": "Rayleigh",
+                "notes": "Rayleighův rozptyl je rozptyl světla na částice mnohem menší, než je vlnová délka světla. Je zodpovědný za modrou barvu oblohy během dne."
+            },
+            "mieCoefficient": {
+                "label": "Mieův koeficient",
+                "notes": "Mieův rozptyl je rozptyl světla na částicích větších, než je vlnová délka světla. Je zodpovědný za červené a oranžové barvy oblohy při východu a západu slunce."
+            },
+            "mieDirectionalG": {
+                "label": "Směrové G (Mie)"
+            },
+            "starDensity": {
+                "label": "Hustota hvězd",
+                "notes": "Množství hvězd viditelných na obloze."
+            },
+            "color": {
+                "label": "Barva",
+                "notes": "Barva oblohy."
+            },
+            "enableClouds": {
+                "label": "Povolit mraky?"
+            },
+            "cloudsSpeed": {
+                "label": "Rychlost mraků"
+            },
+            "cloudsAlpha": {
+                "label": "Průhlednost mraků"
+            },
+            "cloudsTint": {
+                "label": "Barva mraků"
+            },
+            "cloudsScale": {
+                "label": "Měřítko mraků"
+            }
+        }
+    }
+}
