@@ -1,0 +1,28 @@
+{
+  "id": "czechtranslation3dcanvas",
+  "title": "CzechTranslation3dCanvas",
+  "version": "1.2.0",
+  "compatibility": {
+    "minimum": "13.351",
+    "verified": "13.351"
+  },
+  "description": "Český překlad modulu 3d Canvas.",
+  "authors": [
+    {
+      "name": "Lethrendis",
+      "email": "michmildub@seznam.cz",
+      "discord": "Lethrendis",
+      "flags": {}
+    }
+  ],
+  "languages": [
+      {
+      "lang": "cs",
+      "name": "Čeština",
+      "path": "lang/cs.json"
+    }
+  ],
+  "url": "https://raw.githubusercontent.com/Lethrendis/CzechTranslation3dCanvas/main/module.json",
+  "manifest": "https://raw.githubusercontent.com/Lethrendis/CzechTranslation3dCanvas/main/module.json",
+  "download": "https://github.com/Lethrendis/CzechTranslation3dCanvas/archive/refs/heads/main.zip"
+}
