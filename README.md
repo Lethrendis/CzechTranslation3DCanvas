@@ -1,10 +1,10 @@
 
 # Czech3dCanvas
 
-Czech translation of 3d Canvas 7.0.20
+Czech translation of 3d Canvas 8.0.0
 
 ## Popis
-Tento modul poskytuje českou lokalizaci pro 3d Canvas verze 7.0.20. Obsahuje překlady základních textů aplikace.
+Tento modul poskytuje českou lokalizaci pro 3d Canvas verze 8.0.0. Obsahuje překlady základních textů aplikace.
 
 ## Instalace
 Pro instalaci modulu obvyklým upůsobem můžeš použít následující odkaz ve Foundry VTT:
