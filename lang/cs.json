@@ -2192,8 +2192,8 @@
                     "content": "Tyto přepínače ti umožní určit, zda mají umístěné zdroje blokovat výhled a/nebo pohyb."
                 },
                 "step-6": {
-                    "title": "Rozmísťování",
-                    "content": "Toto tlačítko zapne rozmísťování zdrojů. Pokud je aktivní, můžeš kliknutím a tažením po scéně umisťovat více zdrojů najednou."
+                    "title": "Rozkopírování",
+                    "content": "Toto tlačítko zapne rozkopírování zdrojů. Pokud je aktivní, můžeš kliknutím a tažením po scéně umisťovat více zdrojů najednou."
                 },
                 "step-7": {
                     "title": "Vzhled",
@@ -2395,31 +2395,31 @@
                 }
             },
             "asset-browser-paint": {
-                "title": "Panel: Prohlížeč zdrojů: Rozmísťování",
-                "description": "Tato prohlídka tě provede rozmísťováním v Prohlížeči zdrojů.",
+                "title": "Panel: Prohlížeč zdrojů: Rokopírování",
+                "description": "Tato prohlídka tě provede rokopírováním v Prohlížeči zdrojů.",
                 "requires": "Pro spuštění této prohlídky musíš mít nainstalovaný 3D Canvas Mapmaking Pack a otevřený Prohlížeč zdrojů.",
                 "step-0": {
-                    "title": "Režim rozmísťování",
-                    "content": "Režim rozmísťování ti umožní rychle rozmisťovat dlaždice po scéně."
+                    "title": "Režim rokopírování",
+                    "content": "Režim rozkopírování ti umožní rychle rozmisťovat dlaždice po scéně."
                 },
                 "step-1": {
                     "title": "Vyber jeden či více zdrojů",
-                    "content": "Pro zahájení rozmísťování musíš v Prohlížeči zdrojů vybrat jeden či více zdrojů. Klikněte na zdroj pro výběr, nebo použij Ctrl+klik pro výběr více zdrojů."
+                    "content": "Pro zahájení rozkopírování musíš v Prohlížeči zdrojů vybrat jeden či více zdrojů. Klikni na zdroj pro výběr, nebo použij Ctrl+klik pro výběr více zdrojů."
                 },
                 "step-2": {
                     "title": "Oznámení o výběru",
                     "content": "Po výběru jednoho či více zdrojů se ve spodní části okna zobrazí oznámení."
                 },
                 "step-3": {
-                    "title": "Rozmísťování: Obdélník",
+                    "title": "Rozkopírování: Obdélník",
                     "content": "Pokud je aktivní nástroj 'Umístit dlaždici', můžeš kliknout a táhnout po scéně a nakreslit obdélník. Ten se vyplní vybranými zdroji."
                 },
                 "step-4": {
-                    "title": "Rozmísťování: Mnohoúhelník",
+                    "title": "Rozkopírování: Mnohoúhelník",
                     "content": "Pokud je aktivní nástroj 'Mnohoúhelník', klikni a táhni pro zahájení tvorby mnohoúhelníku. Při držení levého tlačítka myši klikni pravým tlačítkem pro přidání bodu. Po dokončení uvolni levé tlačítko; pokud tvar neuzavřeš, zdroje se rozptýlí podél segmentu, jinak vyplní plochu."
                 },
                 "step-5": {
-                    "title": "Rozmísťování: Volnou rukou",
+                    "title": "Rozkopírování Volnou rukou",
                     "content": "Pokud je aktivní nástroj 'Výběr', podrž Shift a poté klikni a táhni pro umisťování zdrojů po scéně."
                 }
             }
